@@ -1,0 +1,54 @@
+<scroll-view
+  class = "person"
+  scroll-y = "true"
+  scroll-top = "{{scrollTop}}"
+>
+  <view class='top1'>
+      <view class='img'>
+        <image src='../public/header.png'>
+        </image>
+      </view>
+
+      <view>
+        <text>昵称</text>
+      </view>
+  </view>
+  
+  <view class='form'>
+    <view class='form1'>
+        <view>
+            <text>个人信息</text>
+        </view>
+            <button catchtouchstart='changemodels' id='form-item1' value="学院 " class='button' >
+              学院：
+                <view class='form1_1'>{{college}}</view>
+                <view class='form1_2'>></view>
+            </button>
+            <button catchtouchstart='' id='form-item2' value="专业" class='button'>
+              专业:
+                <view class='form1_1'>{{major}}</view>
+                <view class='form1_2'>></view>
+            </button>
+              <button catchtouchstart='' id='form-item3' value="学号" class='button'>
+              学号:
+                <view class='form1_1'>{{number}}</view>
+                <view class='form1_2'>></view>
+            </button>
+      </view>     
+
+    <view class='form2'>
+      <view><text>设置</text></view>
+      <view><button catchtouchstart=''>关于暂时没有名字</button></view>
+      <view><button catchtouchstart=''>反馈</button></view>
+    </view>  
+    
+    <view class='form3'>
+      <view><button type='warn'>退出登录</button></view>
+    </view>
+
+    <view class='form4'>
+      <text>这里用来填空白 放入一些小程序的介绍</text>
+    </view>
+
+  </view>
+</scroll-view>
