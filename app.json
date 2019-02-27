@@ -6,12 +6,45 @@
     "pages/detail/detail",
     "pages/discuss/discuss",
     "pages/person/person",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/changemodels/college/college"
   ],
+
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "暂时没有名字",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#00B26A",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "pages/public/header.png",
+      "selectedIconPath": "pages/public/header2.png"
+    },
+    {
+      "pagePath":"pages/discuss/discuss",
+      "text":"论坛",
+      "iconPath":"pages/public/header2.png",
+      "selectedIconPath":"pages/public/header.png"
+    },
+    {
+      "pagePath":"pages/clock/clock",
+      "text":"打卡",
+      "iconPath":"pages/public/header.png",
+      "selectedIconPath":"pages/public/header2.png"
+    },
+    {
+      "pagePath":"pages/person/person",
+      "text":"我",
+      "iconPath":"pages/public/header2.png",
+      "selectedIconPath":"pages/public/header.png"
+    }
+    ]
   }
+
 }
