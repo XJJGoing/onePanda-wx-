@@ -1,21 +1,13 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.index{
+  height: 1200rpx;
+  width: 100%;
+  background-color: yellow
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+._swiper{
+  height:300rpx;
+  background-color:red
 }
+/*这里添加一些自定义的字体样式*/
+.parse{
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
 }
