@@ -9,10 +9,11 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.0",
+	"libVersion": "2.6.1",
 	"appid": "wxd763acfcb06de61a",
 	"projectname": "JustReading",
 	"debugOptions": {
