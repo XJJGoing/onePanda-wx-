@@ -1,0 +1,21 @@
+<view>
+   <form bindsubmit='commit_1'>
+     <view class='session1'>
+        <text>请您将发现的问题反馈给我们哦</text>
+        <textarea name="msg" 
+                  placeholder='这里输入您的反馈...' 
+                  class='input1' 
+                  focus='true'>
+         </textarea>
+        <textarea
+               name="msg1" 
+               placeholder='请留下您的联系方式QQ或者邮箱...'
+               class='input2'
+               focus='true'
+        >
+        </textarea>
+        <button form-type='submit' size='mini' type='primary'>发射</button>
+     </view>
+   </form>
+</view>
+

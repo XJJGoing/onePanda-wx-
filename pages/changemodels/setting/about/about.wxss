@@ -1,0 +1,51 @@
+/*第一部分css*/
+.session1{
+  position: relative;
+  height: 200rpx;
+  background-color: yellow;
+}
+.session1_1{
+  position: relative;
+  float: right;
+}
+.session1_1,image{
+  height: 150rpx;
+  width: 150rpx;
+}
+.session1_2{
+  position: relative;
+  right: 30%;
+  top: 30%;
+  float: right;
+  background-color: red;
+}
+
+/*第二部分css*/
+.session2{
+  position: relative;
+  height: 200rpx;
+  background-color: green;
+}
+.session2_1{
+  position: relative;
+  left: 60%;
+}
+.session2,image{
+  height: 170rpx;
+}
+
+/*第三部分css*/
+.session3{
+  position: relative;
+  height: 200rpx;
+  background-color: blue
+}
+.session3_1{
+  position: relative;
+  left: 40%;
+}
+session3,image{
+  height: 200rpx;
+  width: 200rpx;
+}
+

@@ -1,0 +1,40 @@
+<view class=''>
+  <block wx:if="{{item=='学院'||item=='专业'}}">
+    <form bindsubmit='commit_1'>
+
+      <view class='settion' style='height:{{first_Height}}rpx'>
+        <view><text>修改{{item}}</text></view>
+        <picker range='{{middle}}' value='{{index}}' bindchange='bindPickerChange'>
+          <view>
+            <button size='mini' >点击我选择：
+              <input name='choose' value="{{middle[index]}}"></input>
+            </button>
+          </view>
+        </picker>
+        <view>
+          <button type='primary' size='mini' form-type='submit' >确认修改</button>
+        </view>
+      </view>
+
+      <!--第二部分的高度-->
+      <view class='settion2' style='height:{{second_Height}}px'>
+      这里存放一些东西
+      </view>
+
+    </form>
+  </block>
+    
+    <!--条件渲染修改学号-->
+   <block wx:else>
+     <form bindsubmit='commit_1'>
+        <view class='settion3'>
+          <view class='settion4'>
+             <text>请输入您的学号：</text>
+             <input placeholder='在这输入哦' name='choose' focus='true'                                      type='number' confirm-type='done'/>
+          </view>
+           <button type='primary' size='mini' form-type='submit'>确认修改</button>
+        </view>
+    </form>
+   </block>
+
+</view>

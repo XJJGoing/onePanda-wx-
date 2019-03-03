@@ -1,0 +1,21 @@
+<view>
+  <!--这是一级部分-->
+  <view class="session1">
+    <view class='session1_1'><image src='../../../public/header.png'></image></view>
+    <view class='session1_2'><text>xxxxxxx书</text></view>
+    <view style='clear:relative'></view>
+  </view>
+
+  <!--这是二级部分-->
+  <view class='session2'>
+    <view class='session2_1'><image src='../../../public/header.png'></image></view>
+    <view style='clear:relative'></view>
+  </view>
+  
+  <!--这是第三部分-->
+  <view class='session3'>
+    <view class='session3_1'><image src='../../../public/header.png'></image></view>
+  </view>
+
+</view>
+
