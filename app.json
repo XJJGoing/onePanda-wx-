@@ -1,13 +1,16 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/changemodels/personinfo/personinfo",
+    "pages/person/person",
     "pages/clock/clock",
     "pages/detail/detail",
     "pages/discuss/discuss",
-    "pages/person/person",
     "pages/result/result",
-    "pages/changemodels/college/college"
+    "pages/changemodels/setting/about/about",
+    "pages/changemodels/setting/feedback/feedback",
+    "pages/changemodels/setting/insert/insert",
+    "pages/logs/logs"
   ],
 
   "window":{
