@@ -19,29 +19,59 @@
         <view>
             <text>个人信息</text>
         </view>
-            <button catchtouchstart='changemodels' id='form-item1' value="学院 " class='button' >
-              学院：
-                <view class='form1_1'>{{college}}</view>
-                <view class='form1_2'>></view>
-            </button>
-            <button catchtouchstart='' id='form-item2' value="专业" class='button'>
-              专业:
-                <view class='form1_1'>{{major}}</view>
-                <view class='form1_2'>></view>
-            </button>
-              <button catchtouchstart='' id='form-item3' value="学号" class='button'>
-              学号:
-                <view class='form1_1'>{{number}}</view>
-                <view class='form1_2'>></view>
-            </button>
+            <view>
+              <navigator url='../changemodels/personinfo/personinfo?item=学院'>
+                <button class='button'>
+                  学院：
+                  <view class='form1_1'>{{college}}</view>
+                  <view class='form1_2'>></view>
+                </button>
+              </navigator>
+            </view>
+
+            <view>
+              <navigator url='../changemodels/personinfo/personinfo?item=专业'>
+                <button class='button'>
+                  专业：
+                  <view class='form1_1'>{{major}}</view>
+                  <view class='form1_2'>></view>
+                </button>
+              </navigator>
+            </view>
+
+             <view>
+              <navigator url='../changemodels/personinfo/personinfo?item=学号'>
+                <button class='button'>
+                  学号：
+                  <view class='form1_1'>{{number}}</view>
+                  <view class='form1_2'>></view>
+                </button>
+              </navigator>
+            </view>
+
       </view>     
 
     <view class='form2'>
       <view><text>设置</text></view>
-      <view><button catchtouchstart=''>关于暂时没有名字</button></view>
-      <view><button catchtouchstart=''>反馈</button></view>
+      <view>
+        <navigator url='../changemodels/setting/about/about'>
+          <button>关于暂时没有名字</button>
+        </navigator>
+      </view>
+
+      <view>
+        <navigator url='../changemodels/setting/feedback/feedback'>
+          <button>反馈</button>
+        </navigator>
+      </view>
+
+      <view>
+        <navigator url='../changemodels/setting/insert/insert'>
+          <button>试题的录入（限管理）</button>
+        </navigator>
+      </view>
+
     </view>  
-    
     <view class='form3'>
       <view><button type='warn'>退出登录</button></view>
     </view>
