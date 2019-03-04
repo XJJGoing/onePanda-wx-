@@ -10,6 +10,7 @@
     "pages/changemodels/setting/about/about",
     "pages/changemodels/setting/feedback/feedback",
     "pages/changemodels/setting/insert/insert",
+    "pages/changemodels/setting/insert/insertDetail/insertDetail",
     "pages/logs/logs"
   ],
 
