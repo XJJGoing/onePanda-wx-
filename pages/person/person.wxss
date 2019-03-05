@@ -22,7 +22,7 @@
 .img,image{
   width: 200rpx;
   height: 200rpx;
-  border-radius: 25%
+  border-radius: 50%
 }
 
 .form{

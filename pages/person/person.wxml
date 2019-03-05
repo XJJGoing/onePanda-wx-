@@ -19,7 +19,7 @@
         <view>
             <text>个人信息</text>
         </view>
-            <view>
+            <view>                    
               <navigator url='../changemodels/personinfo/personinfo?item=学院'>
                 <button class='button'>
                   学院：
