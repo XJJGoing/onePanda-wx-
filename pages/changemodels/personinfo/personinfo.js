@@ -47,13 +47,12 @@ Page
             "计算机科学与应用"
           ]
       ],
-      arry3: [],
 
       //设置一个中间数组用来定位选中的item之后显示的东西
       middle: []
 
     },
-
+    
     onLoad(option) 
     {
       //这里使用that的原因 是因为在微信小程序中 使用官方的api的时候，this指针作用域会改变
@@ -117,7 +116,6 @@ Page
     /*picker选择器的绑定改动的函数*/
     bindPickerChange(e) 
     {
-
       //生成新的变量，并改变college的值
       this.setData({
         index: e.detail.value
@@ -136,7 +134,6 @@ Page
        let choose = e.detail.value.choose
        
        //判断选中的item
-  
        if (this.data.item === "学院" )
        {
           prePage.setData({
@@ -156,6 +153,7 @@ Page
          })
        }
     /*这里同时也要添加要服务端即添加reques请求*/
+  
      wx.navigateBack({
        delta:2
      })

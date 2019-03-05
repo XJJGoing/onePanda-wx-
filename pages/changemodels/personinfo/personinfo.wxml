@@ -11,7 +11,7 @@
             </button>
           </view>
         </picker>
-        <view>
+        <view>  
           <button type='primary' size='mini' form-type='submit' >确认修改</button>
         </view>
       </view>
@@ -23,7 +23,7 @@
 
     </form>
   </block>
-    
+  
     <!--条件渲染修改学号-->
    <block wx:else>
      <form bindsubmit='commit_1'>
@@ -32,7 +32,7 @@
              <text>请输入您的学号：</text>
              <input placeholder='在这输入哦' name='choose' focus='true'                                      type='number' confirm-type='done'/>
           </view>
-           <button type='primary' size='mini' form-type='submit'>确认修改</button>
+            <button type='primary' size='mini' form-type='submit'>确认修改</button>
         </view>
     </form>
    </block>
