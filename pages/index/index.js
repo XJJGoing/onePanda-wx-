@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 //修改修改修改
+//测试这里修改
 const app = getApp()
 Page({
 
