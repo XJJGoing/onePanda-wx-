@@ -1,21 +1,20 @@
-<view>
-  <!--这是一级部分-->
-  <view class="session1">
-    <view class='session1_1'><image src='../../../public/header.png'></image></view>
-    <view class='session1_2'><text>xxxxxxx书</text></view>
-    <view style='clear:relative'></view>
-  </view>
 
-  <!--这是二级部分-->
+<view class='session'>
+<!-- 小程序头像 -->
+  <view class='session1'>
+    <image src='../../../public/header.png'class='setimage'></image>
+  <text>小程序的名字</text>  
+  </view>
+<!-- 开发者介绍   -->
   <view class='session2'>
-    <view class='session2_1'><image src='../../../public/header.png'></image></view>
-    <view style='clear:relative'></view>
+    <text>XX小程序由林永健、陈志浩等人开发，竭力为江苏科技大学信管专业的学生提供学习上的帮助。
+    </text>
   </view>
+<!-- 数据源 -->
   
-  <!--这是第三部分-->
-  <view class='session3'>
-    <view class='session3_1'><image src='../../../public/header.png'></image></view>
+  <view class="session1">
+    <text>小程序内的参考书均由信管专业老师推荐</text>
+   
   </view>
-
+  <text>版本:</text> 
 </view>
-

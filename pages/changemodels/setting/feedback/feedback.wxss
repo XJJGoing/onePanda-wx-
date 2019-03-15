@@ -1,3 +1,4 @@
+
 /* pages/changemodels/setting/feedback/feedback.wxss */
 .session1{
  display:flex;
@@ -5,7 +6,6 @@
  justify-content:space-around;
  align-items: center;
  height: 1000rpx;
- background-color: yellow;
 }
 .session1,text{
   color: black;
@@ -13,8 +13,12 @@
 .input1{
   left: 1%;
   right: 1%;
-  font-size: 25rpx;
+  font-size: 35rpx;
   border: 1rpx  solid gray;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius:10%; 
 }
 
 .input2{
@@ -22,5 +26,9 @@
  right: 1%;
  height: 100rpx;
  border: 1rpx solid gray;
- font-size: 25rpx;
+ font-size: 30rpx;
+  border-bottom-right-radius: 5%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  border-bottom-left-radius:5%; 
 }

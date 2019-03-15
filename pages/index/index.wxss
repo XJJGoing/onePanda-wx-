@@ -1,4 +1,4 @@
-.index{
+/*.index{
   height: 1200rpx;
   width: 100%;
   background-color: yellow
@@ -7,7 +7,30 @@
   height:300rpx;
   background-color:red;
 }
+*/
+
+.index{
+  height: 1200rpx;
+  width: 100%;
+  background-color:#abcdef;
+}
+._swiper{
+  height:300rpx;
+  background-color:#fff;
+}
+.image{
+  width:250rpx;
+  height:250rpx;
+  }
+.image-in{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
 /*这里添加一些自定义的字体样式*/
 .parse{
-
+}
+.zifu{
+  text-indent: 2em;
 }

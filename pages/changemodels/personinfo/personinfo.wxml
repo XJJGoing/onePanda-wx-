@@ -1,3 +1,4 @@
+
 <view class=''>
   <block wx:if="{{item=='学院'||item=='专业'}}">
     <form bindsubmit='commit_1'>
@@ -17,9 +18,9 @@
       </view>
 
       <!--第二部分的高度-->
-      <view class='settion2' style='height:{{second_Height}}px'>
+      <!-- <view class='settion2' style='height:{{second_Height}}px'>
       这里存放一些东西
-      </view>
+      </view> -->
 
     </form>
   </block>

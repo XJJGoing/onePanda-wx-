@@ -3,17 +3,19 @@
   scroll-y = "true"
   scroll-top = "{{scrollTop}}"
 >
+ <block wx:if="{{logfirm}}">
   <view class='top1'>
       <view class='img'>
-        <image src='../public/header.png'>
+        <image src='{{avatarUrl}}'>
         </image>
       </view>
 
       <view>
-        <text>昵称</text>
+        <text>{{nickname}}</text>
       </view>
+      
   </view>
-  
+
   <view class='form'>
     <view class='form1'>
         <view>
@@ -75,10 +77,18 @@
     <view class='form3'>
       <view><button type='warn'>退出登录</button></view>
     </view>
-
+   
     <view class='form4'>
       <text>这里用来填空白 放入一些小程序的介绍</text>
     </view>
-
+  
   </view>
+</block>
+
+<block wx:else>
+   <view class='denglu'>
+     <button type='primary' bindtap='log' size='mini'>微信一键登录</button>
+  </view> 
+</block>
+
 </scroll-view>

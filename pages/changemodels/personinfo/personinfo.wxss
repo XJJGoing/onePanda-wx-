@@ -1,17 +1,16 @@
+
 .settion{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-color: yellow;
 }
 .settion2{
-  background-color: red;
-  width: 100%
+  width: 100%;
+  background-color:whitesmoke;
 }
 .settion{
-  background-color: yellow;
   height: 300rpx;
 }
 
@@ -21,8 +20,7 @@
   justify-content: space-around;
   align-items: center;
   height: 300rpx;
-  font-size: 30rpx;
-  background-color: yellow;
+  font-size: 35rpx;
 }
 
 .settion4{

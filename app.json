@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/changemodels/personinfo/personinfo",
     "pages/person/person",
@@ -13,42 +13,41 @@
     "pages/changemodels/setting/insert/insertDetail/insertDetail",
     "pages/logs/logs"
   ],
-
-  "window":{
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#000000",
     "navigationBarTitleText": "暂时没有名字",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#00B26A",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "pages/public/header.png",
-      "selectedIconPath": "pages/public/header2.png"
-    },
-    {
-      "pagePath":"pages/discuss/discuss",
-      "text":"论坛",
-      "iconPath":"pages/public/header2.png",
-      "selectedIconPath":"pages/public/header.png"
-    },
-    {
-      "pagePath":"pages/clock/clock",
-      "text":"打卡",
-      "iconPath":"pages/public/header.png",
-      "selectedIconPath":"pages/public/header2.png"
-    },
-    {
-      "pagePath":"pages/person/person",
-      "text":"我",
-      "iconPath":"pages/public/header2.png",
-      "selectedIconPath":"pages/public/header.png"
-    }
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/public/imgs/shouye.png",
+        "selectedIconPath": "pages/public/imgs/shouye1.png"
+      },
+      {
+        "pagePath": "pages/discuss/discuss",
+        "text": "论坛",
+        "iconPath": "pages/public/imgs/luntan.png",
+        "selectedIconPath": "pages/public/imgs/luntan1.png"
+      },
+      {
+        "pagePath": "pages/clock/clock",
+        "text": "打卡",
+        "iconPath": "pages/public/imgs/daqia.png",
+        "selectedIconPath": "pages/public/imgs/daqia1.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我",
+        "iconPath": "pages/public/imgs/wode.png",
+        "selectedIconPath": "pages/public/imgs/wode1.png"
+      }
     ]
   }
-
 }

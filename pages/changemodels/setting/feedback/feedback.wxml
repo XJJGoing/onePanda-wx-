@@ -3,9 +3,10 @@
      <view class='session1'>
         <text>请您将发现的问题反馈给我们哦</text>
         <textarea name="msg" 
-                  placeholder='这里输入您的反馈...' 
+                  placeholder='.....这里输入您的反馈...' 
                   class='input1' 
-                  focus='true'>
+                  focus='true'
+        >
          </textarea>
         <textarea
                name="msg1" 
