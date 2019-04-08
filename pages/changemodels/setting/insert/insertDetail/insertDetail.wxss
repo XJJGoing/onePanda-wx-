@@ -1,0 +1,148 @@
+.all{
+  height: 1200rpx;
+  width: 100%;
+  font-family: "楷体";
+  overflow-y: scroll;
+}
+
+.agree{
+  height: 1200rpx;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 100rpx;
+  border: 1px dotted gray;
+  padding: 10rpx;
+}
+.title{
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color:#6EC0B2;
+}
+.agree textarea{
+  display: block;
+  font-size: 30rpx;
+  height: 700rpx;
+  width: 90%;
+  margin-top: 40rpx;
+  margin: 40rpx auto;
+  background-color:#FAFBF9;
+  padding: 10rpx;
+  border: 2px solid grey; 
+  letter-spacing: 2px;
+  overflow-y: scroll;
+}
+.agree textarea text{
+  display: block;
+}
+.agree button{
+  display: inline-block;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-top: 80rpx;
+}
+.disAgree{
+  margin-left:20rpx;
+  float: left;
+}
+.Agree{
+  margin-right:20rpx;
+  float: right;
+}
+::-webkit-scrollbar{
+  height: 6px;
+  width: 2px;
+}
+
+
+/*第二个页面详细页面*/
+.Detail{
+  height: 1600rpx;
+  width: 100%;
+  background-color:#D6E8FE;
+  padding: 15px;
+}
+
+.form_old{
+ height: 1000rpx;
+ width: 90%;
+ border: 1px dotted #FEFBF2;
+ padding: 5px;
+}
+
+.form_old  text{
+  height: 100rpx;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+.form_old picker{
+  width: 100%;
+  height: 200rpx;
+  display: block;
+}
+
+
+.form_old button{
+  height: 100rpx;
+  width: 300rpx;
+  display: flex;
+  align-items: center;
+}
+
+
+.form_old picker button{
+  text-align: center;
+}
+
+.form_old picker button input{
+  display: inline-block;
+  font-size: 20rpx;
+  font-family: '楷体'
+}
+
+.books_has{
+  height: 600rpx;
+  width: 95%;
+  margin-left: 5rpx;
+  border: 1px dotted #9BD6C4;
+  overflow-y: scroll;
+  padding: 5rpx;
+}
+
+.books_has button{
+  height: 100rpx;
+  width: 100%;
+  margin-top: 5rpx;
+  display: block;
+}
+
+/*录入新书部分*/
+.new{
+  margin-top: 10rpx;
+  width: 90%;
+  height: 500rpx;
+  border: 1 solid black;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.new text{
+  width: 90%;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 20rpx;
+} 
+
+.new image{
+  width: 300rpx;
+  height: 300rpx;
+}

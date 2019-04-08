@@ -2,19 +2,18 @@
 <view class='session'>
 <!-- 小程序头像 -->
   <view class='session1'>
-    <image src='../../../public/header.png'class='setimage'></image>
-  <text>小程序的名字</text>  
+    <image src='#'class='setimage'/>
+    <text>小程序的名字</text>  
   </view>
 <!-- 开发者介绍   -->
   <view class='session2'>
-    <text>XX小程序由林永健、陈志浩等人开发，竭力为江苏科技大学信管专业的学生提供学习上的帮助。
+    <text>XX小程序由林永健、陈志浩等人开发，竭力为江苏科技大学信管专业的学生提供学习     上的帮助。
     </text>
   </view>
 <!-- 数据源 -->
   
   <view class="session1">
     <text>小程序内的参考书均由信管专业老师推荐</text>
-   
   </view>
   <text>版本:</text> 
 </view>

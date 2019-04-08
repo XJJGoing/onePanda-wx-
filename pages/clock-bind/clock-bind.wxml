@@ -1,0 +1,27 @@
+<view class=''>
+
+  <block wx:if="{{item=='专业'||item=='题型'||item=='书籍'}}">
+    <form bindsubmit='commit_1'>
+      <view class='settion' style='height:{{first_Height}}rpx'>
+        <view><text>选择{{item}}</text></view>
+        <picker 
+              range='{{middle}}' 
+              value='{{index}}' 
+              bindchange='bindPickerChange'
+        >
+          <view>
+            <button size='mini' >点击我选择：
+              <input name='choose' value="{{middle[index]}}" disabled='true'></input>
+            </button>
+          </view>
+        </picker>
+        <view>  
+            <button type='primary' size='mini' form-type='submit' >
+               确认选择                
+            </button>
+        </view>
+      </view>
+    </form>
+  </block>
+
+</view>

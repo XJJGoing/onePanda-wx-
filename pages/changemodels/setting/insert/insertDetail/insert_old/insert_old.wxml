@@ -1,0 +1,105 @@
+<scroll-view
+ scroll-y = "true"
+ class='all'
+>
+
+    <view class='insert_kind'>
+      <text>题目类型:</text>
+      <picker range='{{kind}}' value='{{index}}' bindchange='bindPickChange'>
+        <button>
+          <input value='{{kind[index]}}' disabled='true'/>
+        </button>
+      </picker>
+    </view>
+
+    <!--选择题-->
+    <block wx:if="{{item==0}}">
+      <view class='choose'>
+        <form bindsubmit='form_submit0' bindreset=''>
+              问题：<textarea name='question' auto-height='true'>
+                    </textarea>
+              A:<textarea name="chooseA" auto-height='true'>
+                </textarea>
+              B:<textarea name="chooseB" auto-height='true'>
+                </textarea>
+              C:<textarea name="chooseC" auto-height='true'>
+                </textarea>
+              D:<textarea name="chooseD" auto-height='true'>
+                </textarea>
+              正确答案：
+              <radio-group bindchange='correctChoose' name="correct">
+                  <label>
+                      <radio checked='' value='A'>A</radio>
+                  </label>
+                  <label>
+                      <radio checked='' value='B'>B</radio>
+                  </label>
+                  <label>
+                      <radio checked='' value='C'>C</radio>
+                  </label>
+                  <label>
+                      <radio checked='' value='D'>D</radio>
+                  </label>
+              </radio-group>
+              解释（可不填）：<textarea name="resolve" auto-height='true'>
+                            </textarea>
+              <button form-type='reset' class='bt1' type='warn'>
+                  重置
+              </button>
+              <button form-type='submit' class='bt2' type='primary'>
+                  提交
+              </button>
+        </form>
+      </view>
+    </block>
+
+    <!--判断题-->
+    <block wx:elif="{{item==1}}">
+    <view class='judge'>
+       <form bindsubmit="form_submit1" bindreset="">
+          <text>问题:</text>
+          <textarea auto-height='true' name="question">
+           
+          </textarea>
+          答案：
+          <radio-group bindchange="correctJudge" name="correct">
+            <label>
+              <radio value='true' checked=''>true</radio>
+            </label>
+            <label>
+              <radio value='true' checked=''>false</radio>
+            </label>
+          </radio-group>
+           解释（可不填）：<textarea name="resolve" auto-height='true'>
+                            </textarea>
+              <button form-type='reset' class='bt1' type='warn'>
+                  重置
+              </button>
+              <button form-type='submit' class='bt2' type='primary'>
+                  提交
+              </button>
+       </form>
+    </view>
+    </block>
+
+    <!--填空题-->
+    <block wx:elif="{{item==2}}">
+      <form bindsubmit='form_submit2' bindreset=''>
+        <view class='fill'>
+          <text>问题</text>
+          <textarea auto-height='true' name="question">
+          </textarea>
+          正确答案(必填)：
+          <textarea auto-height='true' name="correct">
+          </textarea>
+        </view>
+            <button form-type='reset' class='bt1' type='warn'>
+               重置
+            </button>
+            <button form-type='submit' class='bt2' type='primary'>
+               提交
+            </button>
+      </form> 
+    </block>
+
+</scroll-view>

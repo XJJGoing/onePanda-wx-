@@ -3,6 +3,7 @@
   background-color:#fff;
   height: 1200rpx;
   width: 100%;
+  font-family: "楷体";
 }
 
 /*滚动条的设置*/

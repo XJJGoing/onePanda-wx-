@@ -1,0 +1,31 @@
+/* pages/clock-bind/clock-bind.wxss */
+.settion{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.settion2{
+  width: 100%;
+  background-color:whitesmoke;
+}
+.settion{
+  height: 300rpx;
+}
+
+.settion3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 300rpx;
+  font-size: 35rpx;
+}
+
+.settion4{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

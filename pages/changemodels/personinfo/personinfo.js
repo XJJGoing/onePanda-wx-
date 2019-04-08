@@ -1,7 +1,6 @@
 //获取全局的变量
+const userInfo = require('../../../request/requset.js').userInfo;
 const app = getApp()
-//引用一下 person页面的js文件，因为要用里面的data数据
-
 Page
   ({
     data: {
@@ -18,7 +17,12 @@ Page
       second_Height: 0,
 
       //添加arry1以及arry2的时候请1 1对应（后面的程序是这样设计的）
-      arry1: ["经济管理学院", "电信学院", "人文社科学院", "土木与建筑学院", "计算机学院"],
+      arry1: ["经济管理学院", 
+              "电信学院", 
+              "土木工程与建筑学院", 
+              "计算机学院",
+              "粮食学院"
+              ],
       arry2:
        [
           [
@@ -26,15 +30,20 @@ Page
             "财务管理",
             "会计学",
             "工商管理",
+            "中澳工商管理",
+            "工业工程",
+            "金融工程",
+            "经济学",
+            "物流管理"
           ],
           [
-            "电气极其自动化",
-            "电科",
+            "电气工程及其自动化",
+            "电子信息科学与技术",
+            "电子信息工程",
+            "水声工程",
+            "测控技术与仪器",
             "自动化"
-          ],
-          [
-            "人力资源管理",
-            "还有等待补充",
+
           ],
           [
             "建筑学",
@@ -45,6 +54,10 @@ Page
             "软件工程",
             "物联网应用",
             "计算机科学与应用"
+          ],
+          [
+            "粮食工程",
+            "食品质量与安全"
           ]
       ],
 
@@ -152,12 +165,45 @@ Page
            number:choose
          })
        }
-    /*这里同时也要添加要服务端即添加reques请求*/
-  
-     wx.navigateBack({
-       delta:2
-     })
-   }
+    /*这里同时也要添加要服务端即添加reques请求,并且将数据存储到本地,判断消息不全为空的时提交*/
+       if(prePage.data.college&&prePage.data.number&&prePage.data.major)
+       {
+         let userdata = {
+           openid:wx.getStorageSync('usercookie'),
+           college:prePage.data.college,
+           major:prePage.data.major,
+           number:prePage.data.number,
+         }
+          wx.setStorageSync('userdata', userdata)
+           wx.request({
+             url: userInfo,
+             data: userdata,
+             dataType: 'json',
+             method: 'GET',
+             success: (res) => {
+               console.log(res.data)
+             }
+           })
+       }
+      wx.navigateBack({
+        delta:2
+      })
+   },
+   
+   //存储原来的数据以方便修改
+   todata()
+  {
+    let userdata = wx.getStorageSync('userdata');
+    if(userdata!== '')
+    {
+      this.setData({
+        college: userdata.college,
+        major: userdata.major,
+        number: userdata.number
+      })
+    }
+  },
+
   })
 
 

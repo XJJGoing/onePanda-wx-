@@ -1,26 +1,17 @@
-/*.index{
-  height: 1200rpx;
-  width: 100%;
-  background-color: yellow
-}
-._swiper{
-  height:300rpx;
-  background-color:red;
-}
-*/
 
 .index{
   height: 1200rpx;
   width: 100%;
-  background-color:#abcdef;
+  background-color:#FDFDD6;
+  font-family: "楷体";
 }
 ._swiper{
   height:300rpx;
   background-color:#fff;
 }
 .image{
-  width:250rpx;
-  height:250rpx;
+  width:450rpx;
+  height:300rpx;
   }
 .image-in{
   display: flex;

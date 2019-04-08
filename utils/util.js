@@ -1,5 +1,5 @@
  //获取当前时间的js
- const formatTime = date => {
+ const formatTime = function(date) {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
@@ -16,7 +16,16 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+//只获取当前的小时以及分钟
+const formatTime2 = (date) =>{
+   const hour = date.getHours()
+   const minute = date.getMinutes()
+  const second = date.getSeconds()
+  return [hour, minute,second]
+}
+
 //暴露该组件
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatTime2:formatTime2
 }

@@ -8,7 +8,7 @@
         <picker range='{{middle}}' value='{{index}}' bindchange='bindPickerChange'>
           <view>
             <button size='mini' >点击我选择：
-              <input name='choose' value="{{middle[index]}}"></input>
+              <input name='choose' value="{{middle[index]}}" disabled='true'></input>
             </button>
           </view>
         </picker>

@@ -1,0 +1,19 @@
+<!--pages/index/navigator/navigator.wxml-->
+<scroll-view class='view1'  
+            scroll-y="true"
+>
+
+  <view class='background-img'>
+      <image src='../../public/bg/beijing1.JPG' />
+  </view>
+
+    <view class='content'>
+        <view class='view1_1'>
+              {{name}}
+        </view>
+        <view class='view1_2'>
+           <view class='text1'>{{detail}}</view>
+        </view>
+    </view>
+
+</scroll-view>

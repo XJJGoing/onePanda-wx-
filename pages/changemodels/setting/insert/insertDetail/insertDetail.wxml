@@ -1,0 +1,64 @@
+<scroll-view 
+            class='all' 
+            scroll-y='true'>
+
+  <block wx:if="{{item1}}">
+    <view class='agree'>
+        <text class='title'>管理者协议</text>
+        <textarea
+          disabled='true'
+        >
+        <text>1.请获得授权者认证阅读以及遵守如下软件协议。</text>
+        <text>2.获得授权者只能录入健康向上的书本以及题目。</text>
+        <text>3.不得往数据库中录入垃圾的题目以及不良的题目。</text>
+        <text>4.禁止录入反工反党以及反政治相关的题目。</text>
+        <text>5.禁止录入录入色情以及带有侮辱性语言的题目。</text>
+        <text>6.本账号只能供一人使用，禁止转让他们，一经发现追究到底。</text>
+        <text>7.禁止将该账号用于个人事情方面。</text>
+        <text>8.试题的录入，有一定的要求，要求与书本相关并且</text>
+        <text>9.使用管理者账号时请严格的遵守熊猫APP的相关协议。</text>
+        <text>10.一切解释权归熊猫App产品所有</text>
+        </textarea>
+        <button type='warn' class='disAgree'  bindtap='dischange'>拒绝</button>
+        <button type='primary' class='Agree' bindtap='change'>同意</button>
+    </view>
+  </block>
+   
+  <block wx:if="{{item2}}">
+     
+    <view class='Detail'>
+
+      <view class='form_old'>
+        <text>从已经有的专业的书籍录入题目</text>
+        <text>选择查看的专业：</text>
+        <picker range='{{majors}}' value="{{index}}" bindchange='bindPickChange'>
+          <button type='default'>
+             <input value='{{majors[index]}}' disabled='true'/>
+          </button>
+        </picker>
+
+        <block wx:if="{{books}}">
+          <scroll-view class='books_has'scroll-y="true">
+            <view wx:for="{{books}}" 
+                  wx:for-index = "index" 
+                  wx:for-item = "item" 
+                  wx:key=""
+             >
+              <button bindtap='navigataor'>
+                 {{item.name}}
+              </button>
+            </view>
+          </scroll-view>
+        </block>
+
+
+      </view>
+
+      <view class='new'>
+        <text>录入新书联系（QQ）:1499755237</text>
+        <image src='../../../../public/info/LYJ.png'></image>
+      </view>
+    </view>
+  </block>
+
+</scroll-view>

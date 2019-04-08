@@ -1,6 +1,45 @@
 <!--insert页面-->
-<view class=''>
-  <view>欢迎来到开发者页面</view>
-  <view>
-  </view>
-</view>
+     <scroll-view class='session1'
+                  scroll-y = "true"
+                  scroll-top = "{{scrollTop}}"
+      >
+       <view class='background-img'>
+         <image src="../../../public/bg/beijing2.JPG" />
+       </view>
+      <view class = 'content'>
+
+         <view id="welcome">试题管理者页面</view>
+
+         <!-- 输入账号 -->
+          <input placeholder='账号'
+                     class='input1' 
+                     value='{{key}}' 
+                     bindinput="bindKeyInput" 
+                     focus='true'
+             />
+              <a wx:if="{{key}}" 
+                bindtap="eliminate" 
+                class="iconfont icon-iconfontwiconguanbi1"
+              >
+              </a>
+
+       <!-- 输入密码 -->
+       <view class="we-cell">
+          <input password='{{isShowPassword}}' 
+                     placeholder='密码' 
+                     bindinput="bindPassInput" 
+                     focus='true' 
+                     placeholder-class='placeholder-class'
+               />
+              <view bindtap="toggleShowPassword" 
+                    id="biyan"> 
+                  <a wx:if="{{password}}" class="iconfont icon-yanjing"></a>
+              </view>
+       </view>
+
+       <view class="btn-area">
+         <button bindtap="bindViewTap">登陆</button>
+       </view>
+    
+    </view>
+    </scroll-view>

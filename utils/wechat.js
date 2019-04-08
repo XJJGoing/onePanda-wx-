@@ -1,7 +1,7 @@
 /**
  * Promise化小程序接口
  */
-const openid = require('../request/requset.js').openid;
+const login = require('../request/requset.js').login;
 class Wechat {
   /**
    * 登陆
@@ -72,7 +72,7 @@ class Wechat {
    * @param {object} params 
    */
   static getMyOpenid(params) {
-    let url = openid;
+    let url = login;
     return this.request(url, params, "POST", "application/x-www-form-urlencoded");
   };
 }

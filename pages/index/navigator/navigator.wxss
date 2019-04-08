@@ -1,0 +1,66 @@
+/* pages/index/navigator/navigator.wxss */
+.view1
+{
+  display: flex;
+  height: 1000rpx;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 0rpx;
+  top: 0rpx;
+}
+
+/*设置滚动条*/
+::-webkit-scrollbar{
+  width: 1rpx;
+  height: 6rpx;
+}
+
+.backgorund-image
+{
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  height: 1000rpx;
+  width: 100%
+}
+
+image
+{
+  height: 1000rpx;
+  width: 100%;
+}
+
+.content
+{
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  height: 1000rpx;
+  width: 100%
+}
+
+.view1_1
+{
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.view1_2
+{
+  height: 800rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.text1
+{
+ margin-left: 120rpx;
+ margin-right: 120rpx;
+ font-family: "楷体";
+}

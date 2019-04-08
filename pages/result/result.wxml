@@ -1,0 +1,9 @@
+<view class="daend">
+  <view>本章节打卡完成！</view>
+  <view>用时：{{use_time}}分</view>
+  <view>评语：{{}}</view>
+</view> 
+<view class="jiexi">
+  <view>这里显示题目和选项,我不会写</view>
+  <view><text>这里显示用户答案</text><text>这里显示正确答案</text></view>
+</view>

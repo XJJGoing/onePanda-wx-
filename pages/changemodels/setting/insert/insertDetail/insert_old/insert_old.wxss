@@ -1,0 +1,140 @@
+::-webkit-scrollbar{
+  width: 2rpx;
+  height: 6rpx;
+}
+
+.all{
+  height: 1500rpx;
+  width: 90%;
+  padding: 10rpx;
+  font-family: "楷体"
+}
+
+.insert_kind{
+ height: 150rpx;
+ width: 90%;
+ padding: 20rpx;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+}
+
+.insert_kind text{
+  height: 80rpx;
+  width: 200rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.insert_kind picker {
+  width: 300rpx;
+  margin-left: 50rpx;
+  height: 80rpx;
+}
+
+.insert_kind picker button{
+  width: 300rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  font-family: "楷体";
+  border-radius: 2%;
+  color: #3DB6B5
+}
+.insert_kind picker button input{
+  height: 80rpx;
+  width: 250rpx;
+  line-height: 80rpx;
+}
+
+
+/*选择题的css*/
+.choose{
+  margin-left: 50rpx;
+  padding: 20rpx;
+  margin-top: 10rpx;
+  width: 90%;
+}
+.choose text{
+  display: block;
+}
+.choose textarea{
+  margin-top: 30rpx;
+  width: 90%;
+  height: 200rpx;
+  border: 1px dotted #B0A6AF;
+  overflow-y: scroll
+}
+.choose button{
+  margin-top: 20rpx;
+  height: 100rpx;
+  width: 200rpx;
+}
+.bt1{
+  float: left;
+  border-radius:5%;
+}
+.bt2{
+  float: right;
+  border-radius: 5%;
+}
+.choose radio-group{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+}
+
+/*判断题*/
+.judge{
+  margin-left: 50rpx;
+  padding: 20rpx;
+  margin-top: 10rpx;
+  width: 90%;
+}
+.judge text{
+  display: block;
+}
+.judge textarea{
+  margin-top: 30rpx;
+  width: 90%;
+  height: 200rpx;
+  border: 1px dotted #B0A6AF;
+  overflow-y: scroll
+}
+.judge button{
+  margin-top: 20rpx;
+  height: 100rpx;
+  width: 200rpx;
+}
+.judge radio-group{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+}
+
+/*填空题*/
+.fill{
+  margin-left: 50rpx;
+  padding: 20rpx;
+  margin-top: 10rpx;
+  width: 90%;
+}
+.fill text{
+  display: block;
+}
+
+.fill textarea{
+  margin-top: 30rpx;
+  width: 90%;
+  height: 200rpx;
+  border: 1px dotted #B0A6AF;
+  overflow-y: scroll
+}
+
+.fill button{
+  margin-top: 20rpx;
+  height: 100rpx;
+  width: 200rpx;
+}

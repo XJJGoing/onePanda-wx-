@@ -1,1 +1,83 @@
 /* pages/changemodels/setting/insert/insert.wxss */
+
+/* 表单样式 */
+.session1
+{
+  width: 100%;
+  height: 1200rpx;
+  position:relative;
+}
+.content
+{
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  width:100%;
+  height: 1200rpx;
+}
+.backgorund-img
+{
+  position: absolute;
+  width: 100%;
+  height: 1200rpx;
+  left: 0rpx;
+  top:0rpx;
+}
+
+image{
+  height: 1200rpx;
+  width: 100%;
+}
+
+::-webkit-scrollbar
+{
+  width: 1rpx;
+  height: 6rpx;
+}
+
+#welcome{
+  color: black;
+  text-align: center;
+  margin-top:10rpx;
+}
+
+/* 账号输入框样式 */
+.session1 .input1{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin:20rpx 0;
+  border-bottom: 1rpx  solid #eee;
+  padding-left:20rpx;
+}
+/* 显示清除按钮 */
+.session1 a{
+  position:absolute;
+  right:20rpx;
+  top:100rpx;
+  z-index:2;
+}
+
+#biyan{
+  position:absolute;
+  right:0rpx;
+  top:-100rpx;
+  z-index:2;
+}
+/* 密码的使用 */
+.session1 .we-cell{
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+  padding-left:20rpx;
+  position:relative;
+  padding-right: 60rpx;
+}
+/* button按钮样式 */
+.btn-area button{
+  width:80%;
+  margin:30rpx auto;
+  border:0px;
+  background:#1AAD19; 
+  margin-top:100rpx;
+}

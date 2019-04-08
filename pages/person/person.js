@@ -1,6 +1,9 @@
 const app = getApp()
 const weChat = require('../../utils/wechat.js')
-//const session = require('../../request/requset.js').session
+const userInfo = require('../../request/requset.js').userInfo
+const logout = require('../../request/requset.js').logout
+//引入userinfo
+//const userInfo = require('../result/result.js').userInfo
 //引入登录的加载文件
 Page
 ({
@@ -9,7 +12,7 @@ Page
    major:"",
    number:"",
    logfirm:false,
-   avatarUrl:'',
+   avatarUrl:'',  
    nickname:''
   },
   //加载也秒的时候赋值
@@ -22,7 +25,11 @@ Page
       setTimeout(()=>{
        wx.hideLoading()
       },1000)
+      //加载用户的头像以及名称信息
       this.toLog()
+      //加载用户的个人信息
+      this.todata()
+
    },
 
   //一开始进入个人的页面的时候就判断本地是否有cookies
@@ -40,6 +47,19 @@ Page
       }else{
         logfirm:false
       }
+  },
+  //userdata函数,一进来就判断就否存在用户的个人信息
+  todata()
+  {
+   let userdata = wx.getStorageSync('userdata');
+   if(userdata!=='')
+   {
+    this.setData({
+      college:userdata.college,
+      major:userdata.major,
+      number:userdata.number
+    })
+   }
   },
 
   //改变状态的函数
@@ -59,29 +79,47 @@ Page
    {
      //使用第三方api的时候this的指针域会发生变化
        let that = this;
-       wx.showModal({
-       title: '获取用户信息',
-       content: '获取用户的头像以及名称信息，保证保护用户隐私',
-       confirmText:'同意',
-       cancelText:'拒绝',
-       success:function(res)
-       {
-         if(res.confirm)
-         {
-           //点击确认的时候获取用户的信息
+       let data;
            weChat.getCryptoData()
            .then(d=>{
-             that.changeStatus(d.data)
+             data = d.data
              return weChat.getMyOpenid(d)
             })
             .then(d=>{
-              console.log(d)
-              console.log('从后端获取的',d)
-              wx.setStorageSync('usercookie', d.cookies)
+              if (d) {
+                console.log(d)
+                console.log('从后端获取的', d)
+                that.changeStatus(data)
+                wx.setStorageSync('usercookie', d.data)
+              }
             })
-         }
+         },
+
+   /*退出登录的操作*/
+   logout(){
+     console.log(wx.getStorageSync('usercookie'))
+     let openid = {
+       openid: wx.getStorageSync('usercookie')
+     }
+     wx.request({
+       url: logout,
+       data: openid,
+       dataType:'json',
+       mehtod:'GET',
+       success:(res)=>{
+         console.log(res.data)
        }
      })
+     wx.removeStorageSync('usercookie');
+     this.setData({
+       logfirm:false,
+       avatarUrl:'',
+       nickname:'',
+     })
    },
+   
+    onGotUserInfo(e) {
+     this.log()
+    },
 })
 

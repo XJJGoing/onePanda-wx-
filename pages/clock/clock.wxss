@@ -1,0 +1,139 @@
+/*整个页面的布局*/
+ .bj
+ {
+   position: relative;
+   height: 1200rpx;
+   width: 100%;
+   font-family: "楷体";
+ } 
+
+ .background-img
+ {
+   position: absolute;
+   height: 1200rpx;
+   width: 100%;
+   left: 0rpx;
+   top: 0rpx;
+ }
+
+ .background-img image{
+   height: 1200rpx;
+   width: 100%
+ }
+
+.content
+{
+   position: absolute;
+   height: 1200rpx;
+   width: 100%;
+   left: 0rpx;
+   top: 0rpx;
+}
+
+::-webkit-scrollbar{
+  height: 2rpx;
+  width: 2rpx;
+}
+
+.logo{
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav{
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav text
+{
+  border: 2px solid greenyellow;
+  color: gold;
+  font-size: 50rpx;
+}
+
+.logo image
+{
+   height: 200rpx;
+   width: 200rpx;
+   border-radius: 50%;
+}
+.clock
+{
+  height: 150rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;  
+}
+.clock button{
+  height: 100rpx;
+  width: 200rpx;
+  text-align: center;
+  padding: 0;
+  border: none;
+}
+
+
+.form1
+{
+  height: 600rpx;
+  display: felx;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form1 button
+{
+ width: 450rpx;
+ display: inline-block;
+}
+
+.form1_1
+{
+ width: 100%;
+ height: 100rpx;
+ display: flex;
+}
+.form1_1 image
+{
+  
+}
+.title{
+  height: 100rpx;
+  width: 200rpx;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.choose
+{
+  display: inline-block;
+}
+.jiantou
+{
+  display: inline-block;
+  width: 20rpx;
+  float: right;
+}
+
+.pratice
+{
+ display: flex;
+ margin-top: 10%;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}

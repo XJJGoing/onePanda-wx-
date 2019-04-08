@@ -1,17 +1,20 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/changemodels/personinfo/personinfo",
     "pages/person/person",
-    "pages/clock/clock",
     "pages/detail/detail",
     "pages/discuss/discuss",
     "pages/result/result",
+    "pages/clock/clock",
+    "pages/clock-bind/clock-bind",
     "pages/changemodels/setting/about/about",
+    "pages/changemodels/personinfo/personinfo",
     "pages/changemodels/setting/feedback/feedback",
     "pages/changemodels/setting/insert/insert",
     "pages/changemodels/setting/insert/insertDetail/insertDetail",
-    "pages/logs/logs"
+    "pages/changemodels/setting/insert/insertDetail/insert_old/insert_old",
+    "pages/logs/logs",
+    "pages/index/navigator/navigator"
   ],
   "window": {
     "backgroundTextStyle": "dark",

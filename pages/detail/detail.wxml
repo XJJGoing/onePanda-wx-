@@ -1,0 +1,115 @@
+<scroll-view 
+      class='all'
+      scroll-y = "true"
+      scroll-top="{{scrolltop}}"
+>
+  <view class="timu">{{index+1}}.{{question[index].name}}</view>
+
+  <view style="height:700rpx;margin-top:50rpx;">
+    <block wx:if="{{kind_number==1}}">
+      <button 
+          id='A' 
+          class="anniu" 
+          bindtap="btnOpClick" 
+          style="background-color:{{bcA}};"
+      >
+        A:{{question[index].option[0].A}}
+      </button>
+
+      <button 
+          id='B' 
+          class="anniu" 
+          bindtap="btnOpClick" 
+          style="background-color:{{bcB}};"
+      >
+        B:{{question[index].option[0].B}}
+      </button>
+    
+    <block wx:if="{{options_lenght>=3}}">
+      <button 
+            id='C' 
+            hidden="{{}}" 
+            class="anniu" 
+            bindtap="btnOpClick" 
+            style="background-color:{{bcC}};"
+      >
+      C:{{question[index].option[0].C}}
+      </button> 
+    </block>
+
+     <block wx:if="{{options_lenght>3}}">
+      <button 
+            id='D' 
+            hidden="{{}}" 
+            class="anniu" 
+            bindtap="btnOpClick" 
+            style="background-color:{{bcD}};"
+      >
+      D:{{question[index].option[0].D}}
+      </button>
+    </block>
+    </block>    
+    
+   <!--判断题部分-->
+    <block wx:elif="{{kind_number==2}}">
+       <radio-group class="radio-group" bindchange="change">
+          <view>
+            <label>
+                <text>true</text>
+                <radio value='true' checked='{{checked1}}'/>
+            </label>
+
+            <label>
+                <text>false</text>
+                <radio value='false' checked='{{checked2}}' />
+            </label>
+          </view>
+       </radio-group>
+    </block>
+
+
+    <!--简答题部分-->
+    <block wx:else>
+      <view class='short_answer'>
+        <textarea
+            id='input_answer' 
+            placeholder='请输入答案...'
+            auto-height='true'
+            value='{{input}}'
+         >
+         </textarea>
+      </view>
+      <view class='finish'>
+         <button bindtap="finish_input" type='primary'>输入完成</button>
+      </view>
+    </block>
+
+   
+    <!--答案部分-->
+    <block wx:if="{{correct}}">
+        <button  
+              class="anniu" 
+              disabled='true'
+              style='background-color:{{bc_correct}}'
+        >
+        答案:{{correct}}
+        </button>
+    </block>  
+     
+     <block wx:if="{{resolve}}">
+        <button  
+              class="anniu" 
+              disabled='true'
+              style='background-color:{{bc_correct}}'
+        >
+        解释:{{resolve}}
+        </button>
+    </block>
+      
+       <view class="huanti">
+          <button bindtap="lastQuestion" type='primary'>上一题</button>
+          <button bindtap="nextQuestion" type='primary'>下一题</button>
+       </view>
+
+  </view>
+  </scroll-view>

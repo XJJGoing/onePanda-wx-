@@ -11,19 +11,36 @@
      >         
       <swiper-item>
        <view class='image-in'>
-        <image src='../public/imgs/bigdata.jpg' class='image'>
-        </image>
+       <navigator 
+           url='./navigator/navigator?detail={{detail1}}&&name={{name1}}'
+       >
+          <image src='{{item1}}' class='image'/>
+       </navigator>
        </view>
       </swiper-item>
-      <swiper-item>2</swiper-item>
-      <swiper-item>3</swiper-item>
+
+      <swiper-item>
+       <view class='image-in'>
+        <navigator 
+            url='./navigator/navigator?detail={{detail2}}&&name={{name2}}'
+         >
+          <image src='{{item2}}' class='image'/>
+        </navigator>
+       </view>
+      </swiper-item>
+
+      <swiper-item>
+        <view class='image-in'>
+           <image src='../public/bg/work.png' class='image'/>
+       </view>
+      </swiper-item>
+
     </swiper>
 
     <view class='parse'>
      经典书籍：<text>{{parse1[0]}}\n</text>
       <view class='zifu'>
-        <text>《大数据时代》是国外大数据研究的先河之作，本书作者维克托·迈尔·舍恩伯格被誉为“大数据商业应用第一人”，拥有在哈佛大学、牛津大学、耶鲁大学和新加坡国立大学等多个互联网研究重镇任教的经历，早在2010年就在《经济学人》上发布了长达14页对大数据应用的前瞻性研究。
-        </text>
+         
       </view>
     </view>
   </scroll-view>
