@@ -14,21 +14,35 @@
   left: 1%;
   right: 1%;
   font-size: 35rpx;
-  border: 1rpx  solid gray;
+  border: 1rpx  dotted greenyellow;
   border-bottom-right-radius: 20%;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
   border-bottom-left-radius:10%; 
+  overflow-y: scroll;
 }
 
 .input2{
  left: 1%;
  right: 1%;
  height: 100rpx;
- border: 1rpx solid gray;
- font-size: 30rpx;
+ border: 1rpx dotted greenyellow;
+  font-size: 30rpx;
   border-bottom-right-radius: 5%;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
   border-bottom-left-radius:5%; 
+  overflow-y: scroll;
+}
+.session1 button{
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.session1_text{
+  font-size: 30rpx;
+  color: #F45245;
+  font-weight: bold;
 }

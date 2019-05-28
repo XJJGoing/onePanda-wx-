@@ -3,23 +3,15 @@
  {
    position: relative;
    height: 1200rpx;
-   width: 100%;
+   overflow-y: scroll;
+   width:100%;
    font-family: "楷体";
+   background: url(http://wx1.sinaimg.cn/large/0060lm7Tly1g3biu64e31j30hs0vmjte.jpg);
+
+   background-size:100% 100%;
+   -moz-background-size:100% 100%;
  } 
 
- .background-img
- {
-   position: absolute;
-   height: 1200rpx;
-   width: 100%;
-   left: 0rpx;
-   top: 0rpx;
- }
-
- .background-img image{
-   height: 1200rpx;
-   width: 100%
- }
 
 .content
 {
@@ -35,6 +27,7 @@
   width: 2rpx;
 }
 
+/*暂时不要logo
 .logo{
   height: 200rpx;
   width: 100%;
@@ -43,6 +36,12 @@
   justify-content: center;
   align-items: center;
 }
+.logo image
+{
+   height: 200rpx;
+   width: 200rpx;
+   border-radius: 50%;
+}*/
 
 .nav{
   height: 200rpx;
@@ -51,36 +50,67 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 20rpx;
+  margin-top: 80rpx;
 }
 
-.nav text
+.nav view
 {
-  border: 2px solid greenyellow;
-  color: gold;
-  font-size: 50rpx;
+  height:180rpx;
+  width: 180rpx;
+  border: 1px solid #E6E4DB;
+  border-radius: 50%;
+  font-size: 40rpx;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  font-stretch: semi-condensed;
+  font-weight: bold;
+  opacity: 0.8;
 }
 
-.logo image
-{
-   height: 200rpx;
-   width: 200rpx;
-   border-radius: 50%;
+#days{
+  color: #FEEEDF;
+}
+#times{
+  color: #36531A
 }
 .clock
 {
-  height: 150rpx;
+  height: 60rpx;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
+  position: relative;  
 }
-.clock button{
-  height: 100rpx;
+/*.clock button{
+  height: 80rpx;
   width: 200rpx;
+  left: 10rpx;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 0;
   border: none;
+  font-size: 30rpx;
+  position: absolute;
+  background-color: #E6CFA7;
+  margin-top: 20rpx;
+}*/
+.clock button{
+  position: absolute;
+  top: 50rpx;
+  margin: 0 auto;
+  width: 250rpx;
+  height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
 }
 
 
@@ -95,8 +125,12 @@
 
 .form1 button
 {
- width: 450rpx;
+
+ width: 480rpx;
  display: inline-block;
+ font-size: 30rpx;
+ height: 90rpx;
+ border: 1prx dotted #E6E4DB;
 }
 
 .form1_1
@@ -111,16 +145,23 @@
 }
 .title{
   height: 100rpx;
-  width: 200rpx;
+  width: 150rpx;
   display: inline-block;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  font-stretch: expanded;
+  font-weight: bold;
+  color:#02B7FD;
 }
 .choose
 {
   display: inline-block;
+  color: #F3F0BD
+}
+.choose text{
+ 
 }
 .jiantou
 {
@@ -132,8 +173,18 @@
 .pratice
 {
  display: flex;
- margin-top: 10%;
+ margin-top: 150rpx;
  flex-direction: row;
  justify-content: center;
  align-items: center;
 }
+
+.pratice button{
+  border: 1prx dotted #3D7695;
+  width: 300rpx;
+  height: 100rpx;
+  font-weight: bold;
+  font-size: 40rpx!important;
+  color: whitesmoke;
+}
+

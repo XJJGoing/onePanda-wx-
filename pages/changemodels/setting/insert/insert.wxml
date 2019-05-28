@@ -4,7 +4,7 @@
                   scroll-top = "{{scrollTop}}"
       >
        <view class='background-img'>
-         <image src="../../../public/bg/beijing2.JPG" />
+         <image src="#" />
        </view>
       <view class = 'content'>
 

@@ -1,0 +1,33 @@
+.whole{
+  text-align: center;
+}
+.shuju{
+  margin-top: 100rpx;
+}
+.title{
+  text-align: center;
+  width: 100%;
+}
+.share{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+.share image{
+  width:100rpx;
+  height:100rpx;
+}
+.share1{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+  align-items:center;
+}
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+ margin-bottom: 100rpx;
+ margin-top: 100rpx;
+}

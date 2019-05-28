@@ -1,0 +1,122 @@
+<scroll-view
+ class='all'
+>
+ <view class='date'>
+   <picker range='{{term}}' value = '{{index1}}' bindchange='changeTerm'>
+     <button class='button1' plain='true'>{{nowTerm}}</button>
+   </picker>
+   <picker range='{{zc}}' value = '{{index2}}' bindchange='changeZc'>
+     <button class='button2' plain='true'>{{show_zc}}</button>
+   </picker>
+ </view>
+
+ <view class='course'>
+  <view class='xq'>
+    <text>周一</text>
+    <text>周二</text>
+    <text>周三</text>
+    <text>周四</text>
+    <text>周五</text>
+    <text>周六</text>
+    <text>周日</text> 
+  </view>
+
+  <view class='jc'>
+    <text>1</text>
+    <text>2</text>
+    <text>3</text>
+    <text>4</text>
+    <text>5</text>
+    <text>6</text>
+    <text>7</text>
+    <text>8</text>
+    <text>9</text>
+    <text>10</text>
+    <text>备</text>
+    <text>注</text>
+  </view>
+      <view class='course_detail'>
+         <view class='course_tr'
+               wx:for="{{classinfo2}}" 
+               wx:for-index="index" 
+               wx:key=""
+          >
+            <button 
+                    style='background-color:{{classinfo2[index][0].bg}}; margin-left: 10rpx;'
+                    bindtap='detail'
+id="{{classinfo2[index][0].name}}+{{classinfo2[index][0].room}}+{{classinfo2[index][0].teacher}}+{{classinfo2[index][0].number}}+{{classinfo2[index][0].zc1}}"
+                    plain='true'
+             >         
+                      
+                        {{classinfo2[index][0].name}}
+                        @{{classinfo2[index][0].room}}
+                       {{classinfo2[index][0].teacher}}
+            </button>
+            <button 
+                     style='background-color:{{classinfo2[index][1].bg}}'
+                     bindtap='detail'
+ id="{{classinfo2[index][1].name}}+{{classinfo2[index][1].room}}+{{classinfo2[index][1].teacher}}+{{classinfo2[index][1].number}}+{{classinfo2[index][1].zc1}}" 
+                    plain='true'            
+             >
+                      {{classinfo2[index][1].name}}
+                      @{{classinfo2[index][1].room}}
+                      {{classinfo2[index][1].teacher}}
+            </button> 
+            <button 
+                    style='background-color:{{classinfo2[index][2].bg}}'
+                    bindtap='detail'
+id="{{classinfo2[index][2].name}}+{{classinfo2[index][2].room}}+{{classinfo2[index][2].teacher}}+{{classinfo2[index][2].number}}+{{classinfo2[index][2].zc1}}" 
+                    plain='true'                   
+            >
+                       {{classinfo2[index][2].name}}
+                       @{{classinfo2[index][2].room}}
+                       {{classinfo2[index][2].teacher}}
+            </button> 
+            <button 
+                    style='background-color:{{classinfo2[index][3].bg}}'
+                    bindtap='detail'
+  id="{{classinfo2[index][3].name}}+{{classinfo2[index][3].room}}+{{classinfo2[index][3].teacher}}+{{classinfo2[index][3].number}}+{{classinfo2[index][3].zc1}}"
+                    plain='true'                  
+            >
+                      {{classinfo2[index][3].name}}
+                      @{{classinfo2[index][3].room}}
+                      {{classinfo2[index][3].teacher}} 
+            </button> 
+            <button 
+                    style='background-color:{{classinfo2[index][4].bg}}'
+                    bindtap='detail'
+  id="{{classinfo2[index][4].name}}+{{classinfo2[index][4].room}}+{{classinfo2[index][4].teacher}}+{{classinfo2[index][4].number}}+{{classinfo2[index][4].zc1}}"  
+                   plain='true'               
+            >
+                       {{classinfo2[index][4].name}}
+                       @{{classinfo2[index][4].room}}
+                       {{classinfo2[index][4].teacher}}
+            </button> 
+            <button 
+                    style='background-color:{{classinfo2[index][5].bg}}'
+                    bindtap='detail'
+   id="{{classinfo2[index][5].name}}+{{classinfo2[index][5].room}}+{{classinfo2[index][5].teacher}}+{{classinfo2[index][5].number}}+{{classinfo2[index][5].zc1}}"
+                    plain='true'                 
+            >
+                      {{classinfo2[index][5].name}}
+                      @{{classinfo2[index][5].room}}
+                      {{classinfo2[index][5].teacher}}
+            </button> 
+            <button 
+                    style='background-color:{{classinfo2[index][6].bg}}'
+                    bindtap='detail'
+  id="{{classinfo2[index][6].name}}+{{classinfo2[index][6].room}}+{{classinfo2[index][6].teacher}}+{{classinfo2[index][6].number}}+{{classinfo2[index][6].zc1}}"
+                    plain='true'                  
+            >
+                       {{classinfo2[index][6].name}}
+                       @{{classinfo2[index][6].room}}
+                       {{classinfo2[index][6].teacher}}         
+            </button>
+            <view style='clear:both'></view>
+         </view>
+            <view class='bz'> 
+               {{bz}}
+            </view>
+      </view>
+ </view>
+</scroll-view>

@@ -9,32 +9,5 @@
   box-sizing: border-box;
 } 
 
-@font-face {
-  font-family: 'iconfont';  /* project id 1102325 */
-  src: url('//at.alicdn.com/t/font_1102325_egizrz21of.eot');
-  src: url('//at.alicdn.com/t/font_1102325_egizrz21of.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1102325_egizrz21of.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1102325_egizrz21of.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1102325_egizrz21of.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1102325_egizrz21of.svg#iconfont') format('svg');
-}
 
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-.icon-iconfontwiconguanbi1:before {
-  content: "\e627";
-}
-
-.icon-yanjing:before {
-  content: "\e602";
-}
-
-.icon-biyan:before {
-  content: "\e601";
-}

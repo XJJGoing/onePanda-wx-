@@ -1,0 +1,43 @@
+.all{
+  width: 100%;
+  height: auto;
+  overflow-y: scroll;
+}
+
+.transport{
+  width: 100%;
+  text-align: center;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.transport text{
+  font-size: 30rpx;
+  width: 100%;
+  height: 100rpx;
+  font-weight: 10rpx;
+}
+
+.transport image{
+  margin-top: 20rpx;
+  height:2000rpx;
+  border: 1px solid red;
+}
+.transport textarea{
+  margin-top: 20rpx;
+  height: auto;
+  width: 100%;
+  border: 1px solid greenyellow;
+}
+.detail{
+  color: red;
+  display: block;
+  margin-top: 50rpx;
+  font-weight: 20rpx;
+}
+
+.detail_text{
+  display: block;
+  margin: 5rpx;
+  height: 150rpx;
+  padding: 2rpx;
+}

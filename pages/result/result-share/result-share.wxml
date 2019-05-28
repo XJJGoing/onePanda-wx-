@@ -1,0 +1,18 @@
+<scroll-view class="whole">
+  <view class="shuju">
+    <text decode='true' class='title'></text>
+  </view>
+
+<!-- 选择分享目标 -->
+  <view class="divLine"><text>分享到</text></view>
+  <view class="share">
+    <view class="share1">
+      <image bindtap='weFriend' src="../../public/imgs/wechat1.png"/>
+      <text>微信好友</text>
+    </view>
+    <view class="share1">
+      <image bindtap='weQuan' src="../../public/imgs/wechat2.png"/>
+      <text>朋友圈</text>
+    </view>
+  </view>
+</scroll-view>

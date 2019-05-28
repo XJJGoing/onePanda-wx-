@@ -18,7 +18,6 @@ Page
   
   //选中的题型
   bindPickChange(e){
-    console.log(e)
     let index = e.detail.value
     console.log("选中的类型",index)
     this.setData({
@@ -27,12 +26,6 @@ Page
     })
   },
   
-
-  //绑定单选框的函数
-  correctChoose(e){
-   let correct = e.detail.value;
-   return correct;
-  },
 
   //绑定表单提交的函数（选择题）
   form_submit0(e){

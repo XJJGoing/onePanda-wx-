@@ -29,3 +29,9 @@
   justify-content: center;
   align-items: center;
 }
+.commit_1 button{
+  width: 250rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+}

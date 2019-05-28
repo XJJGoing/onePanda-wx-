@@ -1,9 +1,14 @@
-<view class="daend">
-  <view>本章节打卡完成！</view>
-  <view>用时：{{use_time}}分</view>
-  <view>评语：{{}}</view>
-</view> 
-<view class="jiexi">
-  <view>这里显示题目和选项,我不会写</view>
-  <view><text>这里显示用户答案</text><text>这里显示正确答案</text></view>
-</view>
+<scroll-view class="clockEnd">
+<!-- /*做题结果显示*/ -->
+  <view class="result">
+    <view>本章节阅读完成！</view>
+    <view>答题用时：{{use_time}}分，阅读用时</view>
+    <view>做题很认真呦!</view>
+  </view>
+  <!-- 选择是否继续答题 -->
+  <view class="divLine"></view>
+  <view class="choose">
+    <button bindtap='work'>继续做题</button>
+    <button bindtap='share'>分享</button>
+  </view>
+</scroll-view>

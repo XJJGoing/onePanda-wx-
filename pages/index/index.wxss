@@ -1,9 +1,18 @@
+::-webkit-scrollbar{
+  height: 6rpx;
+  width: 2rpx;
+}
+.-web-font{
+    font-family:"Bitstream Vera Serif Bold" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 .index{
-  height: 1200rpx;
+  height: auto;  
   width: 100%;
-  background-color:#FDFDD6;
-  font-family: "楷体";
 }
 ._swiper{
   height:300rpx;
@@ -12,16 +21,62 @@
 .image{
   width:450rpx;
   height:300rpx;
-  }
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+}
+
 .image-in{
   display: flex;
   justify-content: center;
   align-items: center;
   height:100%;
 }
-/*这里添加一些自定义的字体样式*/
-.parse{
+
+#img_work {
+  background-image: url('http://wx4.sinaimg.cn/large/0060lm7Tly1g3aaua3vxmj30yi0n97np.jpg')  !important;
+  background-size:98% 95%;
+  -moz-background-size:90% 90%;
+  background-repeat: no-repeat;
 }
+/* 附加功能样式 */
+.addfun image{
+  width:80rpx;
+  height:80rpx;
+  }
+.addFun1{
+  margin-top: 20rpx;
+  height:120rpx;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  font-size: 25rpx;
+}
+
+
+/* 图标和字体样式 */
+#courSche,#grade,#bus,#extra-acti,#cet,#computer{
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+  align-items:center;
+}
+
+/*分割线样式*/
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+}
+/* 书单样式 */
+.bookList{
+  width:90%;
+  height:300rpx;
+  border:1px solid #E0E3DA;
+  border-radius: 20rpx;
+  margin:40rpx auto; 
+}
+
+
 .zifu{
   text-indent: 2em;
 }

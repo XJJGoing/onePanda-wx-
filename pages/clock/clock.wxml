@@ -1,30 +1,30 @@
 <!-- 页面布局 -->
 <scroll-view
       class = "bj"
-      scroll-y = "true"
       scroll-top = "{{scrollTop}}"
 > 
  <block wx:if="{{hadLogin}}">
+
  <!--背景图片-->
+ <!--
   <view class='background-img'>
-    <image src='../public/bg/beijing4.jpg'/>
+    <image />
   </view>
+  -->
   <!--内容--> 
   <view class='content'>
-    <view class='logo'>
-          <image  src="../public/imgs/bigdata.jpg"/>
-    </view>
+    <view class='clock'>
+      <button type='primary' bindtap='toclock' disabled='{{judge}}'>
+        签到  
+      </button>
+  </view> 
 
   <view class='nav'>
-    <view><text>签到天数:{{days}}</text></view>
-    <view><text>练习分钟:{{time}}</text></view>
+    <view><text id='days'>签到天数:{{days}}</text></view>
+    <view><text id='times'>练习分钟:{{time}}</text></view>
   </view>
   
-  <view class='clock'>
-    <button type='primary' bindtap='toclock' disabled='{{judge}}'>
-      签到  
-    </button>
-  </view> 
+ 
 
   <view class='form1'>
       <view class="form1_1">
@@ -59,7 +59,7 @@
 
               <!-- 开始做题 -->
           <view class='pratice'>
-                <button bindtap='start'>开始做题</button>
+                <button bindtap='start' plain='true'>开始做题</button>
           </view>
         </view>
   </view>

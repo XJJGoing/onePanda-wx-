@@ -169,12 +169,11 @@ Page
        if(prePage.data.college&&prePage.data.number&&prePage.data.major)
        {
          let userdata = {
-           openid:wx.getStorageSync('usercookie'),
+           openid:wx.getStorageSync('openid'),
            college:prePage.data.college,
            major:prePage.data.major,
            number:prePage.data.number,
          }
-          wx.setStorageSync('userdata', userdata)
            wx.request({
              url: userInfo,
              data: userdata,

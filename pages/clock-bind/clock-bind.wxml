@@ -10,13 +10,13 @@
               bindchange='bindPickerChange'
         >
           <view>
-            <button size='mini' >点击我选择：
+            <button >点击我选择：
               <input name='choose' value="{{middle[index]}}" disabled='true'></input>
             </button>
           </view>
         </picker>
         <view>  
-            <button type='primary' size='mini' form-type='submit' >
+            <button type='primary'  form-type='submit' >
                确认选择                
             </button>
         </view>

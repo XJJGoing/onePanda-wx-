@@ -31,16 +31,71 @@
 
       <swiper-item>
         <view class='image-in'>
-           <image src='../public/bg/work.png' class='image'/>
+           <image id='img_work'></image>
        </view>
       </swiper-item>
-
     </swiper>
 
+    <!--第二个轮播功能图-->
+  <swiper 
+     indicator-dots='true'
+     class='_swiper'
+  > 
+    <swiper-item>        
+    <view class="addfun">
+
+      <view class="addFun1">
+        <view id="courSche">
+          <image src="../public/icon/courSche.png" bindtap='enter_course'/>
+          <text>课程表</text>
+        </view>
+
+        <view id="grade">
+          <image src="../public/icon/grade.png" bindtap='enter_grade'/>
+          <text>成绩</text>
+        </view>
+
+        <view id="bus">
+          <image src="../public/icon/bus.png" bindtap='enter_bus'/>
+            <text>校车时间</text>
+        </view>
+      </view>
+
+      <view class="addFun1">
+
+        <view id="extra-acti">
+          <image src="../public/icon/extra-acti.png" bindtap='enter'/>
+          <text>体育打卡 </text>
+        </view>
+
+        <view id="cet"><image src="../public/icon/cet.png" bindtap='enter'/>
+          <text>四六级</text>
+        </view>
+
+        <view id="computer">
+           <image src="../public/icon/computer.png" bindtap='enter'/>
+           <text>全国计算机</text>
+        </view>
+      </view>
+
+    </view>
+    </swiper-item>
+   </swiper>
+    
+    <view class="divLine"></view>
+    <!--
+     <view class="bookList">
+      本周书单
+     </view>
+    <view class="bookList">
+     上周书单
+    </view>
+    <!--
     <view class='parse'>
      经典书籍：<text>{{parse1[0]}}\n</text>
       <view class='zifu'>
          
       </view>
     </view>
+    -->
   </scroll-view>

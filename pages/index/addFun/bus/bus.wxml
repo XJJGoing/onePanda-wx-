@@ -1,0 +1,39 @@
+<!--pages/index/addFun/bus/bus.wxml-->
+<scroll-view
+ class='all'
+>
+ <view class='transport'>
+    <text>
+        交通班车:东——西校区（空格表示终点）
+    </text>
+      <image src='../../../public/info/bus2.jpg'/>
+
+      <text>
+        交通班车:东——南校区(空格表示终点)
+      </text>
+      <image src='../../../public/info/bus2.jpg'/>
+      <text class='detail'>说明</text>
+      <textarea
+       disabled='true'
+      >
+         <text class='detail_text'>
+           1:周一至周五有东——南、东——西直达班次、
+           东——西班次途中经过南校区停106站台。
+         </text>
+         <text class='detail_text'>
+          2：周六周日无东——南直达班次，东——西班次途中    
+          经过南校区停106站台，西——东途中南校区停
+          </text>
+         <text class='detail_text'>
+          3：其中周一至周日9:20到15:15东——西班车经停南            
+          校区。
+          </text>
+         <text class='detail_text'>
+          4：咨询电话：84403095。
+          </text>
+         <text class='detail_text'>
+          5：监督电话：84446677。
+         </text>
+      </textarea>
+ </view>
+</scroll-view>

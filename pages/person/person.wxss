@@ -4,6 +4,7 @@
   height: 1200rpx;
   width: 100%;
   font-family: "楷体";
+  font-size: 30rpx;
 }
 
 /*滚动条的设置*/
@@ -19,6 +20,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-size: 35rpx !important;
   
 }
 
@@ -34,11 +36,14 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
 /*定义个人信息的button按钮的字体的位置*/
 .button{
   text-align: left;
 }
-
+#title{
+  color: black !important;
+}
 .form1_1{
   display: inline;
 }
@@ -65,4 +70,11 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.denglu button{
+  width: 250rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 200rpx;
 }

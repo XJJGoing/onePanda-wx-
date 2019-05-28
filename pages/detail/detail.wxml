@@ -2,18 +2,24 @@
       class='all'
       scroll-y = "true"
       scroll-top="{{scrolltop}}"
->
-  <view class="timu">{{index+1}}.{{question[index].name}}</view>
+> 
+  <block wx:if="{{tojudge}}">
+    <view class="timu">{{index+1}}.{{question[index].name}}</view>
+  </block>
+  <block wx:elif="{{!tojudge}}">
+    <view class="timu">暂无题目</view>
+  </block>
 
-  <view style="height:700rpx;margin-top:50rpx;">
+  <view style="height:700rpx;margin-top:50rpx;" class='detail'>
     <block wx:if="{{kind_number==1}}">
       <button 
           id='A' 
           class="anniu" 
           bindtap="btnOpClick" 
           style="background-color:{{bcA}};"
+          disabled='{{!tojudge}}'
       >
-        A:{{question[index].option[0].A}}
+        A:{{question[index].options[0].A}}
       </button>
 
       <button 
@@ -21,8 +27,9 @@
           class="anniu" 
           bindtap="btnOpClick" 
           style="background-color:{{bcB}};"
+          disabled='{{!tojudge}}'
       >
-        B:{{question[index].option[0].B}}
+        B:{{question[index].options[0].B}}
       </button>
     
     <block wx:if="{{options_lenght>=3}}">
@@ -32,8 +39,9 @@
             class="anniu" 
             bindtap="btnOpClick" 
             style="background-color:{{bcC}};"
+            disabled='{{!tojudge}}'
       >
-      C:{{question[index].option[0].C}}
+      C:{{question[index].options[0].C}}
       </button> 
     </block>
 
@@ -44,8 +52,9 @@
             class="anniu" 
             bindtap="btnOpClick" 
             style="background-color:{{bcD}};"
+            disabled='{{!tojudge}}'
       >
-      D:{{question[index].option[0].D}}
+      D:{{question[index].options[0].D}}
       </button>
     </block>
     </block>    
@@ -56,12 +65,12 @@
           <view>
             <label>
                 <text>true</text>
-                <radio value='true' checked='{{checked1}}'/>
+                <radio value='true' checked='{{checked1}}' disabled='{{!tojudge}}'/>
             </label>
 
             <label>
                 <text>false</text>
-                <radio value='false' checked='{{checked2}}' />
+                <radio value='false' checked='{{checked2}}'disabled='{{!tojudge}}' />
             </label>
           </view>
        </radio-group>
@@ -69,18 +78,24 @@
 
 
     <!--简答题部分-->
-    <block wx:else>
+    <block wx:elif="{{kind_number==3}}">
       <view class='short_answer'>
         <textarea
             id='input_answer' 
             placeholder='请输入答案...'
             auto-height='true'
             value='{{input}}'
+            disabled='{{!tojudge}}'
          >
          </textarea>
-      </view>
+      </view> 
       <view class='finish'>
-         <button bindtap="finish_input" type='primary'>输入完成</button>
+         <button bindtap="finish_input" 
+                 type='primary'
+                 disabled='{{!tojudge}}'
+         >
+           输入完成
+         </button>
       </view>
     </block>
 
@@ -92,7 +107,7 @@
               disabled='true'
               style='background-color:{{bc_correct}}'
         >
-        答案:{{correct}}
+          答案:{{correct}}
         </button>
     </block>  
      
@@ -107,8 +122,18 @@
     </block>
       
        <view class="huanti">
-          <button bindtap="lastQuestion" type='primary'>上一题</button>
-          <button bindtap="nextQuestion" type='primary'>下一题</button>
+          <button bindtap="lastQuestion" 
+                  type='primary' 
+                  disabled='{{!tojudge}}'
+          >
+             上一题
+          </button>
+          <button bindtap="nextQuestion" 
+                  type='primary'
+                  disabled='{{!tojudge}}'
+          >
+           下一题
+          </button>
        </view>
 
   </view>

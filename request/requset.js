@@ -1,5 +1,5 @@
 //这里放入小程序的各种请求
-const server = 'http://129.204.208.59:3000';
+const server = 'https://www.justyunmeng.com';
 
 //请求获取登录的接口
 const login = `${server}/login`;
@@ -37,6 +37,18 @@ const learnTime = `${server}/learnTime`;
 //录入试题的接口
 const insert = `${server}/insert`;
 
+//教务处学生登录接口：
+const insert_student = `${server}/insert_student` ;
+
+//考试成绩的查询的接口
+const exam = `${server}/exam`;
+
+//查询课表的接口
+const course = `${server}/course`;
+
+//排行榜的接口
+const lines = `${server}/lines`;
+
 module.exports = {
   server:server,
   login:login,
@@ -50,5 +62,9 @@ module.exports = {
   chooseInfo:chooseInfo,
   partice:partice,
   learnTime:learnTime,
-  insert:insert
+  insert:insert,
+  insert_student: insert_student,
+  exam:exam,
+  course:course,
+  lines:lines
 }

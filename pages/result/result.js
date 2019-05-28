@@ -8,6 +8,7 @@ Page
 
   onLoad(options)
   {
+    console.log(options.time)
     let time = parseInt(options.time)
     this.setData({
       use_time:time
@@ -19,7 +20,7 @@ Page
   toServer(time)
   {
     let timeData = {
-      openid:wx.getStorageSync('usercookie'),
+      openid:wx.getStorageSync('openid'),
       time: time
     }
     wx.request({
@@ -30,5 +31,19 @@ Page
         console.log(res.data)
       }
     })
-  }
+  },
+  
+    /*继续做题的页面跳转*/
+    work() {
+      wx.switchTab({
+        url: '../clock/clock'
+      })
+    },
+    /*打卡的页面跳转*/
+    share(){
+      wx.redirectTo({
+        url: 'result-share/result-share'
+      })
+    }    
+
 })

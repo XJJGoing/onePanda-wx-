@@ -1,0 +1,85 @@
+.grade{
+  height: auto;
+  overflow-y: scroll;
+  width: 100%;
+}
+::-webkit-scrollbar{
+  height: 6rpx;
+  width: 2rpx;
+}
+.choose{
+  width: 100%;
+  height: 400rpx;
+  border: 1px dotted green;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: center;
+}
+.choose button{
+  margin-top: 20rpx;
+  width: 400rpx;
+  height: 100rpx;
+  border: 1px solid greenyellow;
+  color:green;
+}
+.choose button text{
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+/*显示成绩的列表*/
+.exam{
+  height: auto;
+  width: 100%;
+}
+.title{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: gold;
+  padding: 10rpx;
+}
+.title text{
+  font-size: 30rpx;
+}
+
+.exam_display{
+  margin-top: 10rpx;
+  height: 100rpx;
+  background-color: wheat;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.exam_display text{
+  font-size: 22rpx;
+  height: 100rpx;
+  text-align: center;
+}
+#number{
+  width: 160rpx;
+  margin-left: 40rpx;
+  line-height: 100rpx;
+}
+ #name{
+  width: 200rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  height: 120rpx;
+}
+#xf{
+  width: 50rpx;
+  margin-left: 50rpx;
+  line-height: 100rpx;
+}
+#grade{
+  width: 50rpx;
+  margin-left: 135rpx;
+  line-height: 100rpx;
+}

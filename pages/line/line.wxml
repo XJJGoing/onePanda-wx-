@@ -1,0 +1,54 @@
+<scroll-view
+  scroll-y='true'
+  bindscrolltolower='toMore'
+  class='all'
+>
+ <view class='title'>
+     <button bindtap='changeOrder' style='color:{{colorItem1}}' id='全部' plain='true'>
+        全部
+     </button>
+     <button bindtap='changeOrder' style='color:{{colorItem2}}' id='学院' plain='true'>
+       学院
+      </button>
+     <button bindtap='changeOrder' style='color:{{colorItem3}}' id='专业' plain='true'>
+       专业
+      </button>
+ </view>
+
+  <block wx:if="{{line}}">
+   <view style='height:{{height}}px'>
+   <block wx:if="{{my}}">
+     <view class='my'>
+         <text class='order'>{{myOrder}}</text>
+         <image src="{{my.avatarUrl}}" />
+         <text class='name'>{{my.name}}</text>
+         <view class='detail'>
+            <text>做题时间:{{my.time}}</text>
+            <text>打卡天数:{{my.days}}</text>
+         </view>
+     </view>
+    </block>
+     <view class="clear"></view>
+    
+     <view wx:for="{{line}}" 
+           wx:key="" 
+           wx:for-index="index" 
+           wx:for-item="item"
+           class='content'
+     >
+       <block wx:if="{{index+1<4}}">
+          <image class='order_image' src='../public/icon/{{index+1}}.png'/>
+       </block>
+       <block wx:else>
+          <text class='order'>{{index+1}}</text>
+        </block>    
+          <image src="{{line[index].avatarUrl}}"  />
+          <text class='name'>{{item.name}}</text>
+          <view class='detail'>
+                <text>做题时间:{{line[index].time}}</text>
+                <text>打卡天数:{{line[index].days}}</text>
+          </view>
+     </view>
+   </view>  
+ </block>
+</scroll-view>

@@ -24,17 +24,19 @@ Page
 
     onShow()
     {
-      let hadUser = wx.getStorageSync('usercookie');
+      let hadUser = wx.getStorageSync('openid');
       if (hadUser) {
         this.setData({
           hadLogin: true
         })
         this.getUserDate();
       } else {
-        hadLogin:false
+        this.setData({
+          hadLogin: false
+        })
         wx.showLoading({
           title: '请先登录',
-          duration: 1000
+          duration: 1000,
         })
       }
     },
@@ -43,7 +45,7 @@ Page
     getUserDate()
     {
       let openid = {
-        openid:wx.getStorageSync('usercookie')
+        openid:wx.getStorageSync('openid')
       }
       let that = this;
        wx.request({
@@ -77,21 +79,32 @@ Page
      let that = this;
      let nowData = util.formatTime(new Date());
      wx.setStorageSync('nowData', nowData);
-     let openid = wx.getStorageSync('usercookie')
+     let openid = wx.getStorageSync('openid')
      console.log(nowData)
      let clockData =
       {
         openid:openid,
       }
-      wx.request({
-        url: clock,
-        data:clockData,
-        dataType:'json',
-        method:"GET",
-        success:(res)=>{
-          that.getUserDate()
+      wx.showLoading({
+        title: '加载中',
+        success:()=>{
+          wx.request({
+            url: clock,
+            data: clockData,
+            dataType: 'json',
+            method: "GET",
+            success: (res) => {
+              wx.showToast({
+                title: '签到成功',
+                image: '../public/icon/icon2.png',
+                mask: true,
+                duration: 500,
+              })
+              that.getUserDate()
+            }
+          })
         }
-      })
+      })  
     },
 
     //点击开始做题的提交函数
@@ -113,7 +126,7 @@ Page
       }else{
         wx.showToast({
           title: '请完善如上信息',
-          image:'../public/icon/icon1.jpg',
+          image:'../public/icon/icon1.png',
            mask:true,
           duration:1000,
         })

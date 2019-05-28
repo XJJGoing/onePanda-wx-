@@ -3,23 +3,32 @@
     "pages/index/index",
     "pages/person/person",
     "pages/detail/detail",
-    "pages/discuss/discuss",
+    "pages/line/line",
     "pages/result/result",
     "pages/clock/clock",
     "pages/clock-bind/clock-bind",
+    "pages/logs/logs",
+    "pages/index/navigator/navigator",
+    "pages/index/addFun/course/course",
+    "pages/index/addFun/bus/bus",
+    "pages/index/addFun/cet/cet",
+    "pages/index/addFun/computer/computer",
+    "pages/index/addFun/extra-act/extra-act",
+    "pages/index/addFun/grade/grade",
+    "pages/index/bookList/bookList",
+    "pages/result/result-share/result-share",
+    "pages/index/addFun/enter/enter",
     "pages/changemodels/setting/about/about",
     "pages/changemodels/personinfo/personinfo",
     "pages/changemodels/setting/feedback/feedback",
     "pages/changemodels/setting/insert/insert",
     "pages/changemodels/setting/insert/insertDetail/insertDetail",
-    "pages/changemodels/setting/insert/insertDetail/insert_old/insert_old",
-    "pages/logs/logs",
-    "pages/index/navigator/navigator"
+    "pages/changemodels/setting/insert/insertDetail/insert_old/insert_old"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#000000",
-    "navigationBarTitleText": "暂时没有名字",
+    "navigationBarTitleText": "OnePanda",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -34,10 +43,10 @@
         "selectedIconPath": "pages/public/imgs/shouye1.png"
       },
       {
-        "pagePath": "pages/discuss/discuss",
-        "text": "论坛",
-        "iconPath": "pages/public/imgs/luntan.png",
-        "selectedIconPath": "pages/public/imgs/luntan1.png"
+        "pagePath": "pages/line/line",
+        "text": "排名",
+        "iconPath": "pages/public/imgs/line1.png",
+        "selectedIconPath": "pages/public/imgs/line2.png"
       },
       {
         "pagePath": "pages/clock/clock",

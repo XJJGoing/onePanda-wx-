@@ -1,0 +1,106 @@
+.all{
+  height: auto;
+  overflow-y: scroll;
+  width: 100%;
+  font-family: "楷体";
+}
+::-webkit-scrollbar{
+  width: 2rpx;
+  height: 6rpx;
+}
+.date{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.date picker button{
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  height: 80rpx;
+}
+.button1 {
+   width: 300rpx;
+   float: left;
+   margin-right: 2rpx;
+}
+.button2{
+  width: 160rpx;
+  float: right;
+}
+.course{
+  width: 100%;
+  position: relative;
+}
+.xq{
+  height: 50rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  line-height: 50rpx;
+  border: 1rpx solid greenyellow;
+  font-weight: bold;
+  border-radius: 2rpx;
+
+}
+.xq text{
+  font-size: 23rpx;
+  color: #F07E1E;
+  margin-left: 53rpx;
+}
+
+
+.jc{
+  display: flex;
+  flex-direction: column;
+}
+.jc text{
+  box-sizing: border-box;
+  height: 110rpx;
+  width: 25rpx;
+  line-height: 110rpx;
+  font-size: 20rpx;
+  color: #FC71B5;
+  font-weight: bold;
+}
+
+.course_detail{
+  position: absolute;
+  top: 50rpx;
+  left: 15rpx;
+  margin-top: 5rpx;
+}
+
+.course_tr{
+  display: block;
+}
+
+.course_tr button{
+  padding: 0;
+  box-sizing: border-box;
+  width: 95rpx;
+  height: 220rpx;
+  float: left;
+  margin-top: 2rpx;
+  margin-left: 5rpx;
+  border-radius: 10%;
+  font-size: 22rpx;
+  overflow: hidden;
+  color: white;
+  border: 0rpx;
+  
+}
+
+
+.bz{
+  box-sizing: border-box;
+  width: 100%;
+  height: 220rpx;
+  border: 1rpx dotted greenyellow;
+  font-size: 30rpx;
+  margin-top: 4rpx;
+  margin-left: 15rpx;
+  text-align: left;
+}

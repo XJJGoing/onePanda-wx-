@@ -13,7 +13,7 @@
     </view>
 
     <!--选择题-->
-    <block wx:if="{{item==0}}">
+    <block wx:if="{{item == 0}}">
       <view class='choose'>
         <form bindsubmit='form_submit0' bindreset=''>
               问题：<textarea name='question' auto-height='true'>
@@ -43,12 +43,12 @@
               </radio-group>
               解释（可不填）：<textarea name="resolve" auto-height='true'>
                             </textarea>
-              <button form-type='reset' class='bt1' type='warn'>
-                  重置
-              </button>
-              <button form-type='submit' class='bt2' type='primary'>
-                  提交
-              </button>
+                <button form-type='reset' class='bt1' type='warn'>
+                    重置
+                </button>
+                <button form-type='submit' class='bt2' type='primary'>
+                    提交
+                </button>
         </form>
       </view>
     </block>
@@ -71,13 +71,13 @@
             </label>
           </radio-group>
            解释（可不填）：<textarea name="resolve" auto-height='true'>
-                            </textarea>
-              <button form-type='reset' class='bt1' type='warn'>
-                  重置
-              </button>
-              <button form-type='submit' class='bt2' type='primary'>
-                  提交
-              </button>
+                            </textarea>                       
+                  <button form-type='reset' class='bt1' type='warn'>
+                      重置
+                  </button>
+                  <button form-type='submit' class='bt2' type='primary'>
+                      提交
+                  </button>
        </form>
     </view>
     </block>

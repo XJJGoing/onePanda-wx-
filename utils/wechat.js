@@ -22,7 +22,6 @@ class Wechat {
   /**
    * 发起网络请求*/
   static request(url, params, method = "GET", type = "json") {
-     console.log("向后端传递的参数", params);
      return new Promise((resolve, reject) => {
       let opts = {
         url: url,
@@ -32,7 +31,6 @@ class Wechat {
         success: resolve,
         fail: reject
       }
-      console.log("请求的URL", opts.url);
       wx.request(opts);
     });
   };
@@ -45,12 +43,10 @@ class Wechat {
     return this.login()
       .then(data => {
         code = data.code;
-        console.log("login接口获取的code:", code);
         return this.getUserInfo();
       })
       .then(data => {
         //传递两个参数过去，一个为code(这个要以对象的形式传)，另外一个为userInfo
-        console.log("getUserInfo接口", data);
         let obj = {
           js_code:code,
           nickName:data.userInfo.nickName,

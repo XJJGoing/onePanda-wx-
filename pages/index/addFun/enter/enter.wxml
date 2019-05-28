@@ -1,0 +1,40 @@
+<scroll-view 
+     class='session1'
+     scroll-y = "true"
+     scroll-top = "{{scrollTop}}"
+>
+  <form bindsubmit="formSubmit">
+    <view class = 'content'>
+         <!-- 输入账号 -->
+      <input placeholder='请输入学号'
+           class='input1' 
+           value='{{userName}}'
+           name='userName'
+           bindinput="bindKeyInput" 
+      />
+      <a wx:if="{{key}}" 
+        bindtap="eliminate" 
+        class="iconfont icon-iconfontwiconguanbi1"
+        >
+      </a>
+
+       <!-- 输入密码 -->
+      <view class="we-cell">
+        <input password='{{isShowPassword}}' 
+             placeholder='请输入教务系统密码' 
+             bindinput="bindPassInput"
+             name='userPassword' 
+             value='{{userPassword}}'
+             placeholder-class='placeholder-class'
+            />
+        <view bindtap="toggleShowPassword" id="biyan"> 
+        <a wx:if="{{password}}" class="iconfont icon-yanjing"></a>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button form-type='submit'>点击登录</button>
+      </view>
+    </view>
+  </form>
+</scroll-view>

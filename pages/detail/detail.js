@@ -27,7 +27,15 @@ Page({
     bcA: '',
     bcB: '',
     bcC: '',
-    bcD:''
+    bcD:'',
+
+    //作对的提和做错的题目的颜色
+    color:"",
+    trueColor:"#AAFE0C",
+    falseColor:"#DC443B",
+
+    //去判断是否有题目，没有的话就显示暂无题目
+    tojudge:"",
   },
   
   //统计做题时间的函数
@@ -87,11 +95,19 @@ Page({
            method:'GET',
            success:(res)=>
            {
-             console.log(res.data.arry)
              wx.hideLoading();
-             that.setData({
-               question:res.data.arry
-             })
+             //获取到题目,并判断是否为空
+           //  console.log(res.data.arry)
+             if(res.data.arry.length){
+               that.setData({
+                 question: res.data.arry,
+                 tojudge:true
+               })
+             }else{
+               that.setData({
+                 tojudge:false
+               })
+             }
              callback();
            }
          })
@@ -110,11 +126,10 @@ Page({
      {
        //获得题目(存在异步问题用回调函数解决)
        //减一因为options有个id
-      //此方法用于返回一个对象中属性组成的数组
        this.getData(options.major, options.book, options.kind,()=>{
-         
-         let arry = Object.getOwnPropertyNames(that.data.question[that.data.index].option[0])
-         console.log(arry.length - 1);
+          //此方法用于返回一个对象中属性组成的数组
+         let arry = Object.getOwnPropertyNames(that.data.question[that.data.index].options[0])
+        // console.log(arry.length - 1);
          this.setData({
            kind_number: 1,
            options_lenght: arry.length - 1
@@ -146,7 +161,7 @@ Page({
   forOptions(index)
   {
       //得到选择选项这个对象的属性并形成一个arry数组
-      let arry = Object.getOwnPropertyNames(this.data.question[index].option[0])
+      let arry = Object.getOwnPropertyNames(this.data.question[index].options[0])
       this.setData({
         index: index,
         bcA: this.data.bc_default,
@@ -155,6 +170,7 @@ Page({
         bcD: this.data.bc_default,
         correct: "",
         resolve: "",
+        //选择题的长度
         options_lenght: arry.length - 1
       });
   },
@@ -334,7 +350,7 @@ Page({
         {
           that.onLeave()
           //console.log(that.data.time)
-          wx.navigateTo({
+          wx.redirectTo({
             url: '../result/result?time='+that.data.time,
           })
         }

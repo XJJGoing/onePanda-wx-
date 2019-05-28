@@ -13,29 +13,40 @@ Page
    number:"",
    logfirm:false,
    avatarUrl:'',  
-   nickname:''
-  },
-  //加载也秒的时候赋值
-   onLoad()
-   {
-      wx.showLoading({
-       title: '正在加载',
-       mask:true,
-      })
-      setTimeout(()=>{
-       wx.hideLoading()
-      },1000)
-      //加载用户的头像以及名称信息
-      this.toLog()
-      //加载用户的个人信息
-      this.todata()
+   nickname:'',
 
+   //判断是否提交过用户的信息
+   iscommit:true
+  },
+
+  //加载也秒的时候赋值
+   onShow()
+   {
+         //加载用户的头像以及名称信息
+          this.toLog()
+
+         //加载用户的个人信息
+         this.todata()
+
+       //只提交一次信息  
+       if (this.data.college &&
+       this.data.number &&
+       this.data.major &&
+       wx.getStorageSync('openid')&&
+       this.data.iscommit
+       ) 
+       {
+         this.toServer()
+         this.setData({
+           iscommit:false
+         })
+       }
    },
 
   //一开始进入个人的页面的时候就判断本地是否有cookies
   toLog()
   {
-    let cookie = wx.getStorageSync('usercookie');
+    let cookie = wx.getStorageSync('openid');   //openid
     if (cookie){
       weChat.getCryptoData()
       .then(d=>{
@@ -48,16 +59,17 @@ Page
         logfirm:false
       }
   },
+
   //userdata函数,一进来就判断就否存在用户的个人信息
   todata()
   {
-   let userdata = wx.getStorageSync('userdata');
-   if(userdata!=='')
+   let student_Info = wx.getStorageSync('student_Info');
+    if (student_Info!=='')
    {
     this.setData({
-      college:userdata.college,
-      major:userdata.major,
-      number:userdata.number
+      college: student_Info.xy,
+      major: student_Info.major,
+      number: student_Info.number
     })
    }
   },
@@ -90,16 +102,16 @@ Page
                 console.log(d)
                 console.log('从后端获取的', d)
                 that.changeStatus(data)
-                wx.setStorageSync('usercookie', d.data)
+                wx.setStorageSync('openid', d.data)
               }
             })
          },
 
    /*退出登录的操作*/
    logout(){
-     console.log(wx.getStorageSync('usercookie'))
+     console.log(wx.getStorageSync('openid'))
      let openid = {
-       openid: wx.getStorageSync('usercookie')
+       openid: wx.getStorageSync('openid')
      }
      wx.request({
        url: logout,
@@ -110,16 +122,44 @@ Page
          console.log(res.data)
        }
      })
-     wx.removeStorageSync('usercookie');
+     wx.removeStorageSync('openid');
+     wx.removeStorageSync('student_Data');
+     wx.removeStorageSync('student_Info');
+
      this.setData({
        logfirm:false,
        avatarUrl:'',
        nickname:'',
      })
    },
-   
+
     onGotUserInfo(e) {
      this.log()
     },
+    
+   //如果用户的信息不为空的时候提交到服务端。 
+   toServer(){
+     if (this.data.college && 
+         this.data.number && 
+         this.data.major && 
+         wx.getStorageSync('openid'))
+    {
+      let userdata = {
+        openid: wx.getStorageSync('openid'),
+        college: this.data.college,
+        major: this.data.major,
+        number: this.data.number,
+      }
+      wx.request({
+        url: userInfo,
+        data: userdata,
+        dataType: 'json',
+        method: 'GET',
+        success: (res) => {
+          console.log(res.data)
+        }
+      })
+    }
+  }    
 })
 

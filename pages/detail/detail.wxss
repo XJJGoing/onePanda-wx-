@@ -13,8 +13,16 @@
   text-align: left;
   margin-top: 40rpx;
   line-height: 60rpx;
-  font-size: 50rpx;
+  font-size: 30rpx;
 
+}
+.detail{
+  font-size: 15rpx;
+  color: black;
+}
+.detail button {
+  font-size: 30rpx;
+  color: black;
 }
 .huanti{
   position: fixed;
@@ -23,6 +31,11 @@
   bottom: 100rpx;
   display: flex;
 }
+.huanti button{
+  text-align: center;
+  line-height: 100rpx;
+}
+
 .anniu{
   min-height: 100rpx;
   text-align:left;

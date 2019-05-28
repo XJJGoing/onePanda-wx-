@@ -1,0 +1,46 @@
+<scroll-view
+ class='grade'
+>
+<block>
+    <view class='choose'>
+        <picker range='{{date_arry}}'
+                value='{{index}}'
+                bindchange='bindPickerChange'
+        > 
+            <button plain='true'>
+               {{item}}
+            </button>
+        </picker>
+        <text>课程数目:{{term_number}}</text>
+        <text>绩点:{{term_jd}}</text>
+    </view>
+ </block>
+
+    <view class='exam'>
+      <view class='title'>
+        <text>课程号</text>
+        <text>科目</text>
+        <text>学分</text>
+        <text>成绩</text>
+      </view>
+     <block wx:if="{{exam_arry}}">
+        <view wx:for="{{exam_arry}}" 
+              wx:for-index="index" 
+              wx:for-item="item" 
+              wx:key=""
+              class='exam_display'
+        >
+         <text id='number'>{{exam_arry[index].number}}</text>
+         <text id='name'>{{exam_arry[index].name}}</text>  
+         <text id='xf'>{{exam_arry[index].xf}}</text>
+          <block wx:if="{{exam_arry[index].grade<60}}">          
+            <text id='grade' style='color:red'>{{exam_arry[index].grade}}</text>
+          </block>
+          <block wx:else>
+            <text id='grade'>{{exam_arry[index].grade}}</text>
+          </block>  
+        </view>
+     </block>
+    </view>
+
+</scroll-view>

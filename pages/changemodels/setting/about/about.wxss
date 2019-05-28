@@ -5,20 +5,50 @@
   flex-direction: column;
   justify-content: space-around;
   background-color: rgb(233,230,213);
-  height: 100vh;  
+  height: auto;
+  overflow-y: scroll;
 }
-.session1{
+::-webkit-scrollbar{
+  width: 2rpx;
+  height: 6rpx;
+}
+.title{
+  font-size: 40rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #FEFEFE;
+  color: #40B8AF
 }
 .setimage{
   height: 200rpx;
   width: 200rpx;
- 
+  border-radius: 50%;
 }
-.session2{
-  font-size:18px;
+.session1{
+  font-size:30rpx;
+  background-color:#66F0B4;
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 10rpx;
+  height: 200rpx;
 }
 
+.session2{
+  color: gray;
+  font-size:25rpx;
+  background-color:AAC5BE;
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 10rpx;
+  height: 300rpx;
+}
+
+.vesion{
+  font-size: 30rpx;
+  margin-top:150rpx;
+  margin-bottom: 100rpx;
+}
