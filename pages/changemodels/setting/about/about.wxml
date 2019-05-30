@@ -4,13 +4,13 @@
 >
 <!-- 小程序头像 -->
   <view class='title'>
-    <image src='../../../public/bg/panda.jpg'class='setimage'/>
+    <image src='../../../public/bg/panda.jpg' class='setimage'/>
     <text>OnePanda</text>  
   </view>
 <!-- 开发者介绍   -->
   <view class='session2'>
     <text>
-      介绍:OnePanda小程序为广大江科大各个专业的学生提供学习上的帮助，以及阅读的打卡，提供查看课表、查看成绩等便捷功能。
+      介绍:OnePanda小程序为江科大各个专业的学生提供学习上的帮助，以及阅读的打卡，提供查看课表、查看成绩等便捷功能。
     </text>
     <text>
      开发者：林永健(经济管理学院)、陈志浩（经济管理学院）、李莹莹（经济管理学院）。
@@ -19,11 +19,11 @@
   
   <view class="session1">
     <text>
-       数据源：学校老师、学校教务系统
+       数据源：学校老师、学校教务系统.
     </text>
     <text>
        承诺：遵守Robots爬虫协议，保护用户隐私
     </text>
   </view>
-  <view class='vesion'>版本:1.0.2</view> 
+  <view class='vesion'>版本:1.0.3</view> 
 </scroll-view>

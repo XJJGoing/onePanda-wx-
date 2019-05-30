@@ -41,7 +41,23 @@ Page({
     skip:0,
 
   },
- 
+  onPullDownRefresh(){
+   wx.showNavigationBarLoading({
+     success:()=>{
+       wx.hideNavigationBarLoading();
+       wx.stopPullDownRefresh();
+       this.onLoad();
+     },
+     fail:()=>{
+       wx.showToast({
+         title: '刷新失败',
+         icon:'../public/icon/icon1.png',
+         duration:1000
+       })
+     }
+   });
+  },
+
   onLoad(){
     this.getSystem();
 
@@ -53,9 +69,13 @@ Page({
     wx.showLoading({
       title: '获取中',
       success:()=>{
+        wx.showToast({
+          title: '获取成功',
+          icon:'../public/icon/icon2.png',
+          duration:500,
+        })
         that.request(that.data.skip,'GET',(data)=>{
           that.getLine(data.line, (line) => {
-
             //再次根据学习的天数进行二次排名
             that.getLine2(line,(line)=>{
               that.setData({
@@ -202,7 +222,7 @@ Page({
         } else {
           wx.showToast({
             title: '请完善您的信息',
-            image: '../public/icon/icon2.png',
+            image: '../public/icon/icon1.png',
             duration: 1000
           })
         }
