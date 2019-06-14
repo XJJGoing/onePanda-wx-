@@ -69,6 +69,7 @@ Page({
     wx.showLoading({
       title: '获取中',
       success:()=>{
+        wx.hideLoading();
         wx.showToast({
           title: '获取成功',
           icon:'../public/icon/icon2.png',
@@ -264,7 +265,7 @@ Page({
       dataType:'json',
       success:(res)=>{
        wx.hideLoading()
-       //console.log(res)
+       console.log(res)
        callback(res.data)
       }
     })
