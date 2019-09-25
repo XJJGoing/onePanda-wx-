@@ -61,5 +61,6 @@
         "selectedIconPath": "pages/public/imgs/wode1.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
